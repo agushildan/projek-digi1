@@ -13,7 +13,7 @@ function Beranda() {
   return (
     <div className="beranda-container">
       
-      {/* 1. SEKSI HERO (Bagian Atas Beranda) */}
+    
       <div className="beranda-hero">
         <div className="beranda-left">
           <div className="beranda-judul"> 
@@ -49,17 +49,16 @@ function Beranda() {
         </div>
       </div>
 
-      {/* 2. SEKSI TENTANG (Di Bawah Beranda) */}
       <section className="section-tentang">
         <Tentang />
       </section>  
 
-      {/* yang ke3 */}
+     
 <section className="section-visi-misi">
 <VisiMisi />
 </section>
 
-{/*produk */}
+
 
 <section className="section-product">
   <Produk />

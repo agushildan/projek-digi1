@@ -27,10 +27,9 @@ function Blog() {
           </p>
         </div>
 
-        {/* KOLOM KANAN (2 Blog Kecil) */}
+      
         <div className="blog-sidebar">
-          
-          {/* Blog Kecil 1 */}
+         
           <div className="blog-card">
             <img src="blog2.png" alt="Blog 2" className="blog-img-sub" />
             <div className="blog-meta">

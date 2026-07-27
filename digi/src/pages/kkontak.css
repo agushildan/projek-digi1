@@ -1,4 +1,3 @@
-/* Mengatur container utama agar berada di tengah */
 .kontak-container {
   display: flex;
   flex-direction: column;
@@ -8,7 +7,7 @@
   background-color: white;
 }
 
-/* Styling Judul */
+
 .kontak-title {
   color: #4A90E2; 
   font-size: 42px;

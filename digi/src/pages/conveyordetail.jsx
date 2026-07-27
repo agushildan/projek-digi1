@@ -16,15 +16,15 @@ function Conveyor() {
     <div className="page-wrapper">
       <main className="content-container">
         
-        {/* Tombol Kembali (Absolute Posisi Kiri Atas) */}
+       
         <Link to="/Layanan" className="blog-btn-kembali">
           ❮ Kembali
         </Link>
 
-        {/* Judul Utama */}
+       
         <h1 className="judul-halaman">Produk</h1>
 
-        {/* Kartu Detail Atas */}
+       
         <div className="card-konten">
           <h2 className="judul-produk">Repair Sparepart Conveyor</h2>
 
@@ -38,7 +38,7 @@ function Conveyor() {
           </div>
         </div>
 
-        {/* BAGIAN GALERI / FABRIKASI CHAIN (3-3 DI BAWAH) */}
+       
         <div className="galeri-section">
           <div className="badge-title">Fabrikasi Chain</div>
 

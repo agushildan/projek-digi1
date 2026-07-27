@@ -13,10 +13,10 @@
   flex-direction: column;
 }
 
-/* KONTEN UTAMA */
+
 .content-container {
   flex: 1;
-  padding: 50px 24px 80px 24px; /* Space padding atas-bawah dibuat lega */
+  padding: 50px 24px 80px 24px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,6 @@
   width: 100%;
 }
 
-/* Tombol Kembali (Diposisikan di Kiri Atas dengan Jarak Pas) */
 .blog-btn-kembali {
   position: absolute;
   top: 50px;
@@ -92,7 +91,7 @@
   margin-bottom: 0;
 }
 
-/* BAGIAN GALERI (FABRIKASI CHAIN) */
+
 .galeri-section {
   width: 100%;
   display: flex;
@@ -113,7 +112,7 @@
   text-align: center;
 }
 
-/* Grid 3 Kolom */
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -160,10 +159,10 @@
   text-align: center;
 }
 
-/* RESPONSIVE DESIGN (HP & TABLET) */
+
 @media (max-width: 850px) {
   .content-container {
-    padding-top: 100px; /* Ruang khusus tombol di mobile */
+    padding-top: 100px;
   }
 
   .blog-btn-kembali {

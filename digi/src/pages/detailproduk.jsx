@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Detaill.css";
 
 function Detailproduk() {
-  // State untuk melacak apakah tab "Dengan MIS" aktif atau tidak
+
   const [isDenganMIS, setIsDenganMIS] = useState(true);
 
   return (

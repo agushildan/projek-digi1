@@ -1,24 +1,19 @@
-/* ==========================================
-   WADAH UTAMA BERANDA
-   ========================================== */
+
 .beranda-container {
   display: flex;
-  flex-direction: column; /* Menyusun Hero dan Tentang dari atas ke bawah */
+  flex-direction: column; 
   width: 100%;
   background-color: #f5f9fc; 
   font-family: Arial, sans-serif;
   overflow: hidden; 
 }
 
-/* ==========================================
-   SEKSI HERO (AREA ATAS BERANDA)
-   ========================================== */
 .beranda-hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  min-height: calc(100vh - 80px); /* Layar penuh sebelum scroll */
+  min-height: calc(100vh - 80px); 
   padding: 60px 80px;
   box-sizing: border-box;
   position: relative;
