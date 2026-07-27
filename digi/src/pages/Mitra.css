@@ -1,28 +1,21 @@
-/* ==========================================
-   WADAH UTAMA (BACKGROUND BIRU MUDA)
-   ========================================== */
+
 .mitra-container {
-  background-color:#DFEEF8; /* Warna latar biru sangat muda */
+  background-color:#DFEEF8; 
   min-height: calc(100vh - 80px);
   padding: 50px 80px;
   font-family: Arial, sans-serif;
 }
 
-/* ==========================================
-   JUDUL UTAMA
-   ========================================== */
 .mitra-title {
   text-align: center;
   font-size: 3.5rem;
-  color: #1a2035; /* Warna biru dongker / navy pekat */
+  color: #1a2035; 
   margin-bottom: 50px;
   font-weight: 900;
   letter-spacing: 1px;
 }
 
-/* ==========================================
-   GRID LAYOUT (KOTAK MITRA)
-   ========================================== */
+
 .mitra-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom sama besar */
@@ -31,39 +24,34 @@
   margin: 0 auto; /* Memastikan grid berada di tengah */
 }
 
-/* ==========================================
-   DESAIN JENDELA RETRO (CARD)
-   ========================================== */
 .mitra-card {
   background-color: #ffffff;
   border: 2px solid #825855; /* Warna garis pinggir cokelat kemerahan */
   border-radius: 8px; /* Sudut melengkung */
-  overflow: hidden; /* Memastikan header pink tidak keluar jalur melengkungnya */
-  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.08); /* Efek bayangan lembut */
+  overflow: hidden; 
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.08); 
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease; /* Animasi saat disorot */
+  transition: transform 0.2s ease; 
 }
 
-/* Efek sedikit melayang saat mouse berada di atas kartu */
+
 .mitra-card:hover {
   transform: translateY(-5px);
 }
 
-/* Bagian Atas Jendela (Warna Pink) */
 .mitra-card-header {
-  background-color: #f2b9b9; /* Warna pink pastel */
-  border-bottom: 2px solid #825855; /* Garis bawah pemisah */
+  background-color: #f2b9b9; 
+  border-bottom: 2px solid #825855; 
   padding: 6px 12px;
   display: flex;
-  justify-content: flex-end; /* Memindahkan tombol ke kanan */
+  justify-content: flex-end; 
   align-items: center;
 }
 
-/* Tombol - Kotak X */
 .mitra-window-controls {
   display: flex;
-  gap: 12px; /* Jarak antar simbol */
+  gap: 12px; 
 }
 
 .control-btn {
@@ -74,10 +62,10 @@
   user-select: none;
 }
 
-/* Bagian Bawah Jendela (Tempat Gambar) */
+
 .mitra-card-body {
   padding: 20px;
-  height: 120px; /* Menentukan tinggi area gambar */
+  height: 120px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,36 +75,32 @@
 .mitra-logo {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Memastikan gambar tidak terpotong (menyesuaikan kotak) */
+  object-fit: contain; 
 }
 
-/* ==========================================
-   RESPONSIVITAS UNTUK TABLET & HP
-   ========================================== */
-/* Untuk layar Tablet (Laptop kecil) */
+
 @media (max-width: 1024px) {
   .mitra-grid {
-    grid-template-columns: repeat(3, 1fr); /* Berubah jadi 3 kolom */
+    grid-template-columns: repeat(3, 1fr); 
   }
   .mitra-container {
     padding: 40px;
   }
 }
 
-/* Untuk layar HP / Layar sempit */
+
 @media (max-width: 768px) {
   .mitra-grid {
-    grid-template-columns: repeat(2, 1fr); /* Berubah jadi 2 kolom */
+    grid-template-columns: repeat(2, 1fr); 
   }
   .mitra-title {
     font-size: 2.5rem;
   }
 }
 
-/* Untuk layar HP sangat kecil */
 @media (max-width: 480px) {
   .mitra-grid {
-    grid-template-columns: 1fr; /* Berubah jadi 1 kolom berjejer ke bawah */
+    grid-template-columns: 1fr; 
   }
   .mitra-container {
     padding: 30px 20px;
