@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap');
+
+.faq-page-wrapper {
+    background-color: #B3CBDD;
+    font-family: 'Nonito' , sans-serif;
+    margin: 0;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.faq-title{
+    font-size: 4rem;
+    color: white;
+    text-shadow: 3px 4px 0px rgba(red, green, blue, alpha);
+    margin-top: 0;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+   font-weight: 800;
+}
+
+.faq-container{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-container details{
+    background-color: #def0ff;
+    border: 2.5px solid #1a2634;
+    border-radius: 15px;
+    box-shadow: 0px 6px 0px #1a2634;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.faq-container summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+    list-style: none;
+}
+
+.details {
+    background-color: red;
+    border: 2.5px  solid #10d03a;
+    border-radius: 15px;
+    box-shadow:  0px 6px 0px #1a2634;
+    overflow: hidden;
+}
+
+summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    font-size:  1.1rem;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::-webkit-details-market {
+    display: none;
+}
+
+.ikon-panah{
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+details[open] .ikon-panah{
+    transform: rotate(180deg);
+}
+
+.jawaban {
+    padding: 0px 30px 25px 30px;
+    color: #444;
+    line-height: 1.6;
+    border-top: 1px dashed #1a2634;
+    margin-top: -10px;
+    padding-top: 20px;
+    background-color: #FFFFFF;
+}
+
+.btn-kembali{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background-color: #d1b4a6;
+    border: 2.5px solid #1a2634;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 1rem;
+font-weight: 800;
+color: #1a2634;
+display: flex;
+text-align: center;
+gap: 8px;
+cursor: pointer;
+box-shadow: 0px 5px 0px #1a2634;
+font-family: inherit;
+}
+
+.btn-kembali:active{
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px #1a2634;
+}

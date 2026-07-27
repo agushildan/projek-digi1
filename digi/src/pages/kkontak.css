@@ -1,0 +1,105 @@
+/* Mengatur container utama agar berada di tengah */
+.kontak-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+/* Styling Judul */
+.kontak-title {
+  color: #4A90E2; 
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* Styling Subjudul */
+.kontak-subtitle {
+  color: #4A4A4A; 
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+/* Mengatur form agar ukurannya pas dan berada di tengah */
+.kontak-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Memisahkan label dan input secara vertikal */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: black;
+}
+
+.form-group label {
+  color: #555555;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Styling untuk Input Nama, Email, dan Textarea Pesan */
+.form-group input,
+.form-group textarea {
+  color: #142745;
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  border: 2px solid #E0E0E0; 
+  border-radius: 8px;
+  outline: none;
+  background-color: #FFFFFF;
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease;
+}
+
+/* Mengubah warna garis saat kotak diklik (fokus) */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4A90E2; 
+}
+
+/* Mencegah textarea ditarik ke samping, hanya bisa ke bawah */
+.form-group textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Posisi tombol submit */
+.form-submit {
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Styling Tombol Kirim */
+.btn-kirim {
+  background-color: #1C355E; 
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: 2px solid #C48E8E; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Efek saat tombol disorot */
+.btn-kirim:hover {
+  background-color: #142745;
+  transform: translateY(-2px);
+}

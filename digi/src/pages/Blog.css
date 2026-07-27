@@ -1,0 +1,142 @@
+.blog-container {
+  padding: 40px 80px;
+  background-color: #C0DCF1;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.blog-page-title {
+  color: #803436;
+  display: inline-block; 
+  padding: 10px 40px; 
+  border-radius: 10px; 
+  font-size: 3rem;
+  margin-top: 0; 
+  margin-bottom: 25px; 
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.blog-content-wrapper {
+  display: flex;
+  gap: 40px; 
+  align-items: flex-start;
+}
+
+.blog-main {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blog-img-main {
+  width: 100%;
+  height: 294px; 
+  object-fit: cover; 
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-sidebar {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 40px; 
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-img-sub {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-meta {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.blog-category {
+  color: #3B413B;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  color: #3B413B;
+  margin: 0 0 5px 0;
+  font-weight: 800;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  color: #777777; 
+}
+
+.blog-excerpt {
+  font-size: 1rem;
+  color: #444444;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+.blog-footer {
+  margin-top: 60px; 
+  display: flex;
+  justify-content: flex-start; 
+}
+
+.blog-btn-kembali {
+  background-color: #ffffff;
+  color: #803436; 
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 3px solid #803436;
+  border-radius: 30px; 
+  box-shadow: 0px 5px 0px #4a1a1c; 
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.blog-btn-kembali:active {
+  transform: translateY(4px);
+  box-shadow: 0px 1px 0px #4a1a1c;
+}
+
+
+@media (max-width: 900px) {
+  .blog-container {
+    padding: 30px;
+  }
+  
+  .blog-content-wrapper {
+    flex-direction: column; 
+  }
+
+  .blog-img-main {
+    height: 250px; 
+  }
+}

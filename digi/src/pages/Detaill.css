@@ -1,0 +1,207 @@
+
+.dp-page-container {
+  background-color: #B3CBDD; /* Biru kalem seperti di gambar */
+  min-height: 100vh;
+  padding: 40px 80px;
+  font-family: Arial, sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memusatkan semua elemen di tengah */
+}
+
+
+.dp-btn-kembali {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background-color: #ebd8c3;
+  color: #7A2828;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 25px;
+  border: 3px solid #7A2828;
+  border-radius: 30px;
+  box-shadow: 0px 4px 0px #4a1a1c;
+  display: flex;
+  align-items: center;
+  transition: all 0.1s;
+}
+
+.dp-btn-kembali:active {
+  transform: translateY(4px);
+  box-shadow: 0px 0px 0px #4a1a1c;
+}
+
+.dp-hero-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  background-color: #ffffff;
+  padding: 50px;
+  margin-top: 60px; /* Jarak dari tombol kembali */
+  border: 3px solid #3b5c7a; 
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.konten-teks {
+  display: flex;
+  flex-direction: column;
+}
+
+.judul-detail h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #4a5568;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.textp p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  text-align: justify;
+}
+
+/* GAMBAR BERTUMPUK */
+.konten-gambar {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.konten-gambar img {
+  position: absolute;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.img-hp { width: 160px; top: 0; left: 15%; z-index: 1; }
+.img-tablet { width: 260px; top: 20%; right: 0; z-index: 2; }
+.img-laptop { width: 300px; bottom: 0; left: 0; z-index: 3; }
+
+
+.dp-toggle-wrapper {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.dp-toggle-btn {
+  padding: 12px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 3px solid #1e3a5f;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #1e3a5f;
+  background-color: #ffffff; /* Default: warna putih (tidak aktif) */
+}
+
+/* Saat tombol aktif (diklik) */
+.dp-toggle-btn.active {
+  background-color: #8da9c4; /* Warna biru */
+  color: #1e3a5f;
+}
+
+.dp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+
+.dp-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  min-height: 350px;
+  padding: 30px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Ikon berada di atas */
+}
+
+/* Lingkaran Ikon Umum */
+.dp-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Ikon Centang (MIS Aktif) */
+.icon-check {
+  background-color: #d4edda;
+  color: #28a745;
+  border: 2px solid #28a745;
+}
+
+/* Ikon Silang (Tanpa MIS) */
+.icon-cross {
+  background-color: #f8d7da;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+}
+
+
+.dp-action-wrapper {
+  margin-bottom: 40px;
+}
+
+.dp-btn-beli {
+  background-color: #d8f3dc;
+  color: #52796f;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 15px 50px;
+  border-radius: 40px;
+  border: 4px solid #52796f;
+  box-shadow: 0px 8px 0px #405c54; /* Bayangan 3D Hijau Tua */
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.dp-btn-beli:active {
+  transform: translateY(6px);
+  box-shadow: 0px 2px 0px #405c54;
+}
+
+
+@media (max-width: 900px) {
+  .dp-page-container {
+    padding: 30px 20px;
+  }
+  .dp-btn-kembali {
+    position: relative;
+    top: 0; left: 0;
+    align-self: flex-start;
+  }
+  .dp-hero-box {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    padding: 30px;
+  }
+  .konten-gambar {
+    min-height: 350px;
+  }
+  .dp-cards-grid {
+    grid-template-columns: 1fr; /* Jadi 1 kolom di HP */
+  }
+}

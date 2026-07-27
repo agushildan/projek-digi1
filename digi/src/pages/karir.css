@@ -1,0 +1,165 @@
+.karir-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background-color: #C0DCF1;
+  min-height: calc(100vh - 80px);
+  font-family: Arial, sans-serif;
+  gap: 40px;
+}
+
+.karir-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.karir-greeting {
+  font-size: 4rem;
+  color: #7A2828;
+  margin: 30px 0 0 0;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-align: left;
+  line-height: 1;
+}
+
+.karir-title {
+  font-size: 3.5rem;
+  color: #0b1a30; 
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  text-align: left;
+}
+
+
+.karir-logo-inline {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  right: 90px;
+  top: 250px;
+}
+
+.karir-subtitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0b1a30;
+  margin-bottom: 20px;
+}
+
+.karir-jobs-list {
+  padding-left: 20px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.karir-jobs-list li {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.karir-job-title {
+  font-size: 1.1rem;
+  color: #0b1a30;
+}
+
+.karir-job-desc {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.karir-btn-lamar {
+  background-color: #f5dfdf; /* Warna pink pastel */
+  color: #0b1a30;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  border: 3px solid #0b1a30;
+  border-radius: 30px; /* Bentuk kapsul */
+  cursor: pointer;
+  box-shadow: 0px 6px 0px #0b1a30; /* Bayangan 3D tebal ke bawah */
+  transition: all 0.1s ease;
+}
+
+.karir-btn-lamar:active {
+  transform: translateY(4px); /* Efek tombol tertekan */
+  box-shadow: 0px 2px 0px #0b1a30;
+}
+
+.karir-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.karir-image-wrapper {
+  width: 100%;
+  max-width: 550px;
+  padding: 20px; /* Memberi ruang untuk bayangan offset biru */
+}
+
+.karir-image {
+  width: 100%;
+  height: auto;
+  border: 5px solid #a33131; /* Garis bingkai merah */
+  border-radius: 15px;
+  /* Membuat bayangan keras warna biru muda di sebelah kiri-bawah */
+  box-shadow: -15px 15px 0px #97c2e3; 
+  background-color: white;
+}
+
+
+@media (max-width: 960px) {
+  .karir-container {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+  
+  .karir-left {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .karir-greeting, .karir-title {
+    font-size: 2.8rem;
+  }
+
+  .karir-logo-inline {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .karir-image-wrapper {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+.inline-di{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  height: 130px;
+  margin-top: -35px;
+}
+
+.karir-title-grup{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+

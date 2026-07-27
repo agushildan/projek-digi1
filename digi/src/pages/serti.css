@@ -1,0 +1,224 @@
+/* ==========================================
+   WADAH UTAMA & DINDING KAYU (BACKGROUND)
+   ========================================== */
+.sertifikasi-container {
+  min-height: 100vh;
+  /* Membuat efek dinding panel kayu bergaris */
+  background: repeating-linear-gradient(
+    to right,
+    #f4f1e1,
+    #f4f1e1 79px,
+    #d4caba 80px
+  );
+  padding: 40px 60px 100px 60px; /* Padding bawah lebih besar untuk lantai */
+  position: relative;
+  font-family: 'Arial Rounded MT Bold', 'Comic Sans MS', Arial, sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   JUDUL
+   ========================================== */
+.sertifikasi-title {
+  font-size: 4rem;
+  color: #6a3322; /* Warna cokelat tua */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 0;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+/* ==========================================
+   GRID BINGKAI FOTO (3 Kolom, 2 Baris)
+   ========================================== */
+.sertifikasi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Desain Luar Bingkai Kayu */
+.sertifikasi-frame {
+  background-color: #6a3322; /* Warna dasar bingkai kayu */
+  padding: 20px; /* Ketebalan bingkai kayu */
+  border-radius: 4px;
+  box-shadow: 
+    inset 0 0 10px rgba(0,0,0,0.5), /* Bayangan dalam bingkai */
+    10px 10px 15px rgba(0,0,0,0.3); /* Bayangan bingkai ke dinding */
+  aspect-ratio: 4 / 3; /* Membuat proporsi persegi panjang */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px ridge #8b4513; /* Efek tekstur bingkai timbul */
+}
+
+/* Area Putih di Dalam Bingkai */
+.sertifikasi-frame-inner {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 2px 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ==========================================
+   GAMBAR DI DALAM BINGKAI (DENGAN EFEK HOVER)
+   ========================================== */
+.sertifikasi-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar gambar memenuhi bingkai tanpa merusak proporsi */
+  cursor: pointer; /* Mengubah kursor jadi tangan saat diarahkan */
+  transition: transform 0.3s ease;
+}
+
+/* Efek membesar sedikit saat gambar disorot (menandakan bisa diklik) */
+.sertifikasi-frame-inner:hover .sertifikasi-img {
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   LANTAI KAYU DI BAGIAN BAWAH
+   ========================================== */
+.sertifikasi-floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Tinggi lantai */
+  background: linear-gradient(to bottom, #deb887, #8b4513);
+  border-top: 12px solid #ebd8c3; /* Garis lis plang bawah dinding */
+  z-index: 1;
+}
+
+/* ==========================================
+   TOMBOL KEMBALI
+   ========================================== */
+.sertifikasi-btn-kembali {
+  position: absolute;
+  bottom: 25px; 
+  left: 50px;
+  background-color: #ebd8c3;
+  color: #6a3322;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 3px solid #6a3322;
+  border-radius: 30px;
+  box-shadow: 0px 5px 0px #4a2215; 
+  transition: all 0.1s ease;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sertifikasi-btn-kembali:active {
+  transform: translateY(4px);
+  box-shadow: 0px 1px 0px #4a2215;
+}
+
+/* ==========================================
+   MODAL (LAYAR POP-UP GAMBAR BESAR)
+   ========================================== */
+.sertifikasi-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85); /* Latar hitam transparan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* Z-index maksimal agar menutupi navbar */
+  cursor: zoom-out; /* Kursor berubah jadi tanda minus */
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Tombol X */
+.sertifikasi-modal-close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 100000;
+}
+
+.sertifikasi-modal-close:hover {
+  color: #ff4a4a; /* Merah saat disorot */
+}
+
+/* Gambar Besar di Modal */
+.sertifikasi-modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 6px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 10px 40px rgba(0,0,0,0.6);
+  animation: zoomIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animasi membesar ala pop-up */
+  cursor: default; /* Kursor normal di atas gambar */
+}
+
+/* Keyframes untuk Animasi Pop-up */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ==========================================
+   RESPONSIVITAS UNTUK HP & TABLET
+   ========================================== */
+@media (max-width: 1024px) {
+  .sertifikasi-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .sertifikasi-grid {
+    grid-template-columns: 1fr; /* 1 kolom untuk HP */
+    gap: 30px;
+  }
+  .sertifikasi-title {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .sertifikasi-container {
+    padding: 20px 20px 120px 20px;
+    overflow-y: auto; /* Agar bisa di-scroll di HP */
+  }
+  .sertifikasi-btn-kembali {
+    left: 20px;
+  }
+  .sertifikasi-modal-close {
+    top: 15px;
+    right: 25px;
+  }
+}

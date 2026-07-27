@@ -1,0 +1,166 @@
+
+.tentang-page {
+  background-color: #E6F1F8; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.tentang-top-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 950px;
+}
+
+.tentang-title-text {
+  font-size: 3.5rem;
+  color: #0c1c38; 
+  font-weight: 900;
+  margin: 0;
+}
+
+.tentang-top-logo {
+  height: 150px;
+  top: 100px;
+  width: auto;
+  object-fit: contain;
+
+  transform: translateY(3px);
+}
+
+
+.browser-card {
+  background-color: #ffffff;
+  border: 3px solid #826a5c; 
+  border-radius: 18px;
+  max-width: 950px;
+  width: 100%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+
+.browser-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  gap: 20px;
+  border-bottom: 2px solid #826a5c; 
+  background-color: #ffffff;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background-color: #c85a54; }
+.dot-blue-light { background-color: #88bcd8; }
+.dot-blue { background-color: #4a8db7; }
+
+
+.browser-arrows {
+  display: flex;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #826a5c;
+  cursor: pointer;
+  user-select: none;
+}
+
+.browser-address-bar {
+  flex: 1;
+  border: 2px solid #826a5c;
+  border-radius: 8px;
+  padding: 6px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: monospace, sans-serif;
+  font-size: 0.95rem;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.search-icon {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.browser-home-icon {
+  font-size: 1.3rem;
+  color: #826a5c;
+  cursor: pointer;
+}
+
+.browser-body {
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+
+.browser-text-content {
+  flex: 1.2;
+}
+
+.browser-text-content p {
+  font-size: 0.95rem;
+  color: #444444;
+  line-height: 1.6;
+  margin-bottom: 18px;  
+  text-align: justify;
+}
+
+.browser-text-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+.browser-image-content {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+}
+
+.browser-img-gedung {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 18px; 
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 850px) {
+  .browser-body {
+    flex-direction: column;
+    padding: 25px 20px;
+  }
+  
+  .browser-header {
+    gap: 10px;
+    padding: 12px 15px;
+  }
+  
+  .tentang-title-text {
+    font-size: 2.5rem;
+  }
+}

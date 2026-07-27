@@ -1,0 +1,164 @@
+/* ==========================================
+   WADAH UTAMA BERANDA
+   ========================================== */
+.beranda-container {
+  display: flex;
+  flex-direction: column; /* Menyusun Hero dan Tentang dari atas ke bawah */
+  width: 100%;
+  background-color: #f5f9fc; 
+  font-family: Arial, sans-serif;
+  overflow: hidden; 
+}
+
+/* ==========================================
+   SEKSI HERO (AREA ATAS BERANDA)
+   ========================================== */
+.beranda-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 80px); /* Layar penuh sebelum scroll */
+  padding: 60px 80px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* KIRI: TEKS & TOMBOL */
+.beranda-left {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Tipografi Judul */
+.beranda-judul {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.beranda-judul h1 {
+  font-size: 2.1rem !important; 
+  line-height: 1.1 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15) !important; 
+  font-weight: 900 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  text-align: left !important;
+  letter-spacing: 1px;
+}
+
+.teks-biru {
+  color: #4F8DC0 !important;
+}
+
+.teks-merah {
+  color: #743032 !important;
+}
+
+/* Tipografi Paragraf */
+.beranda-textp {
+  margin-bottom: 30px;
+}
+
+.beranda-textp p {
+  font-size: 1.1rem !important;
+  color: #333333 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 15px !important;
+  text-align: justify !important;
+  font-weight: 500 !important;
+}
+
+/* Tombol Contact Us (Efek 3D) */
+.beranda-btn {
+  display: inline-block;
+  padding: 12px 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0b1a30 !important; 
+  background-color: #d0e3f7 !important; 
+  border: 3px solid #0b1a30; 
+  border-radius: 30px; 
+  text-decoration: none; 
+  cursor: pointer;
+  box-shadow: 0px 6px 0px #0b1a30; 
+  transition: all 0.1s ease; 
+}
+
+.beranda-btn:active {
+  transform: translateY(4px); 
+  box-shadow: 0px 2px 0px #0b1a30; 
+}
+
+/* KANAN: GAMBAR & ANIMASI */
+.beranda-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  width: 100%;
+  max-width: 550px;
+  height: 400px; 
+}
+
+.beranda-latar {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1; 
+  top: -51px;
+}
+
+.beranda-karakter {
+  position: absolute;
+  z-index: 2; 
+  bottom: -20px; 
+  right: -100px;   
+  width: 480px;  
+  height: 350px;
+  top: 70px;
+}
+
+/* ==========================================
+   SEKSI TENTANG (DI BAWAH BERANDA)
+   ========================================== */
+.section-tentang {
+  width: 100%;
+  display: block;
+}
+
+/* ==========================================
+   RESPONSIF (TAMPILAN HP / TABLET)
+   ========================================== */
+@media (max-width: 900px) {
+  .beranda-hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .beranda-left {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+  
+  .beranda-textp p {
+    text-align: center !important;
+  }
+
+  .beranda-judul h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .beranda-right {
+    height: auto;
+    min-height: 300px;
+  }
+}
