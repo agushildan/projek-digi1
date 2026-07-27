@@ -6,10 +6,10 @@ function Conveyor() {
   const itemsData = [
     { id: 1, title: 'Chain', image: 'chain1.jpg' },
     { id: 2, title: 'Chain', image: 'chain2.jpg' },
-    { id: 3, title: 'Chain', image: 'https://via.placeholder.com/300x300?text=Gambar+3' },
-    { id: 4, title: 'Chain', image: 'https://via.placeholder.com/300x300?text=Gambar+4' },
-    { id: 5, title: 'Chain', image: 'https://via.placeholder.com/300x300?text=Gambar+5' },
-    { id: 6, title: 'Chain', image: 'https://via.placeholder.com/300x300?text=Gambar+6' },
+    { id: 3, title: 'Chain', image: '' },
+    { id: 4, title: 'Chain', image: '' },
+    { id: 5, title: 'Chain', image: '' },
+    { id: 6, title: 'Chain', image: '' },
   ];
 
   return (
