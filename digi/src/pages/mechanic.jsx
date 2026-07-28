@@ -47,7 +47,6 @@ export default function MEchanic() {
     { id: 7, image: 'motor7.jpg', title: 'Rewinding Motor' },
   ];
 
-// Daftar 20 gambar tools dari folder public
   const toolsSmallGallery = [
     { id: 1, image: '/tools1.jpg', title: 'Tools' },
     { id: 2, image: '/tools2.jpg', title: 'Tools' },
