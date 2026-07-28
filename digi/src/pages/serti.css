@@ -1,28 +1,21 @@
-/* ==========================================
-   WADAH UTAMA & DINDING KAYU (BACKGROUND)
-   ========================================== */
 .sertifikasi-container {
   min-height: 100vh;
-  /* Membuat efek dinding panel kayu bergaris */
   background: repeating-linear-gradient(
     to right,
     #f4f1e1,
     #f4f1e1 79px,
     #d4caba 80px
   );
-  padding: 40px 60px 100px 60px; /* Padding bawah lebih besar untuk lantai */
+  padding: 40px 60px 100px 60px; 
   position: relative;
   font-family: 'Arial Rounded MT Bold', 'Comic Sans MS', Arial, sans-serif;
   overflow: hidden;
   box-sizing: border-box;
 }
 
-/* ==========================================
-   JUDUL
-   ========================================== */
 .sertifikasi-title {
   font-size: 4rem;
-  color: #6a3322; /* Warna cokelat tua */
+  color: #6a3322; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-top: 0;
   margin-bottom: 40px;
@@ -30,9 +23,7 @@
   text-align: left;
 }
 
-/* ==========================================
-   GRID BINGKAI FOTO (3 Kolom, 2 Baris)
-   ========================================== */
+
 .sertifikasi-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -43,22 +34,22 @@
   z-index: 10;
 }
 
-/* Desain Luar Bingkai Kayu */
+
 .sertifikasi-frame {
-  background-color: #6a3322; /* Warna dasar bingkai kayu */
-  padding: 20px; /* Ketebalan bingkai kayu */
+  background-color: #6a3322; 
+  padding: 20px;
   border-radius: 4px;
   box-shadow: 
-    inset 0 0 10px rgba(0,0,0,0.5), /* Bayangan dalam bingkai */
-    10px 10px 15px rgba(0,0,0,0.3); /* Bayangan bingkai ke dinding */
-  aspect-ratio: 4 / 3; /* Membuat proporsi persegi panjang */
+    inset 0 0 10px rgba(0,0,0,0.5), 
+    10px 10px 15px rgba(0,0,0,0.3); 
+  aspect-ratio: 4 / 3; 
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 6px ridge #8b4513; /* Efek tekstur bingkai timbul */
+  border: 6px ridge #8b4513; 
 }
 
-/* Area Putih di Dalam Bingkai */
+
 .sertifikasi-frame-inner {
   background-color: #ffffff;
   width: 100%;
@@ -71,39 +62,32 @@
   position: relative;
 }
 
-/* ==========================================
-   GAMBAR DI DALAM BINGKAI (DENGAN EFEK HOVER)
-   ========================================== */
+
 .sertifikasi-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Agar gambar memenuhi bingkai tanpa merusak proporsi */
-  cursor: pointer; /* Mengubah kursor jadi tangan saat diarahkan */
+  object-fit: cover;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-/* Efek membesar sedikit saat gambar disorot (menandakan bisa diklik) */
 .sertifikasi-frame-inner:hover .sertifikasi-img {
   transform: scale(1.08);
 }
 
-/* ==========================================
-   LANTAI KAYU DI BAGIAN BAWAH
-   ========================================== */
+
 .sertifikasi-floor {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 70px; /* Tinggi lantai */
+  height: 70px;
   background: linear-gradient(to bottom, #deb887, #8b4513);
-  border-top: 12px solid #ebd8c3; /* Garis lis plang bawah dinding */
+  border-top: 12px solid #ebd8c3; 
   z-index: 1;
 }
 
-/* ==========================================
-   TOMBOL KEMBALI
-   ========================================== */
+
 .sertifikasi-btn-kembali {
   position: absolute;
   bottom: 25px; 
@@ -129,16 +113,14 @@
   box-shadow: 0px 1px 0px #4a2215;
 }
 
-/* ==========================================
-   MODAL (LAYAR POP-UP GAMBAR BESAR)
-   ========================================== */
+
 .sertifikasi-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.85); /* Latar hitam transparan */
+  background-color: rgba(0, 0, 0, 0.85); 
   display: flex;
   justify-content: center;
   align-items: center;

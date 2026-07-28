@@ -1,10 +1,10 @@
 
 .pl-container {
-  background-color: #aec4d6; /* Warna latar biru keabu-abuan sesuai gambar */
+  background-color: #aec4d6;
   min-height: 100vh;
   padding: 40px 60px;
   font-family: Arial, sans-serif;
-  position: relative; /* Patokan untuk elemen absolute */
+  position: relative; 
   display: flex;
   flex-direction: column;
 }
@@ -12,7 +12,7 @@
 
 .pl-header {
   display: flex;
-  justify-content: center; /* Judul tepat di tengah */
+  justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
@@ -26,15 +26,15 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #ebd8c3; /* Warna dasar tombol */
-  color: #7A2828; /* Merah marun */
+  background-color: #ebd8c3; 
+  color: #7A2828; 
   font-size: 1.1rem;
   font-weight: bold;
   text-decoration: none;
   padding: 8px 25px;
   border: 3px solid #7A2828;
   border-radius: 30px;
-  box-shadow: 0px 4px 0px #4a1a1c; /* Efek 3D */
+  box-shadow: 0px 4px 0px #4a1a1c; 
   display: flex;
   align-items: center;
   gap: 10px;
@@ -62,9 +62,9 @@
 }
 
 .pl-logo {
-  height: 60px; /* Sesuaikan ukuran logo */
+  height: 60px; 
   object-fit: contain;
-  transform: translateY(5px); /* Menurunkan logo sedikit agar sejajar rapi */
+  transform: translateY(5px); 
 }
 
 
@@ -72,7 +72,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  flex: 1; /* Mengisi sisa ruang kosong */
+  flex: 1; 
 }
 
 /* Desain Kartu Putih */
@@ -85,11 +85,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 500px; /* Tinggi minimum kartu */
+  min-height: 500px; 
 }
 
 .pl-card-empty {
-  /* Class khusus untuk kartu ke 2 & 3 yang masih kosong */
   background-color: #ffffff;
 }
 
@@ -123,7 +122,7 @@
 
 /* Tombol Detail Produk */
 .pl-btn-detail {
-  background-color: #b34a4a; /* Merah kalem */
+  background-color: #b34a4a; 
   color: white;
   border: none;
   border-radius: 20px;
@@ -151,8 +150,8 @@
 /* Detail Teks Bawah (Lama Pengerjaan dll) */
 .pl-specs {
   display: grid;
-  grid-template-columns: 130px 10px 1fr; /* Layout: [Label] [:] [Isi] */
-  gap: 10px 5px; /* Jarak antar baris dan kolom */
+  grid-template-columns: 130px 10px 1fr;
+  gap: 10px 5px;
   text-align: left;
   font-size: 0.9rem;
   color: #444;
@@ -167,11 +166,8 @@
   line-height: 1.4;
 }
 
-/* ==========================================
-   PAGINATION (BAWAH KANAN)
-   ========================================== */
 .pl-pagination {
-  align-self: flex-end; /* Memaksa ke sebelah kanan */
+  align-self: flex-end; 
   display: flex;
   background-color: #ffffff;
   border-radius: 10px;
@@ -193,7 +189,7 @@
 }
 
 .page-btn:last-child {
-  border-right: none; /* Hilangkan garis di tombol paling ujung */
+  border-right: none; 
 }
 
 .page-btn:hover {
@@ -202,13 +198,12 @@
 
 /* Saat Halaman Aktif (Kotak Biru) */
 .page-btn.active {
-  background-color: #aec4d6; /* Biru muda */
+  background-color: #aec4d6; 
   color: #ffffff;
 }
 
-/* ==========================================
-   RESPONSIVE (HP / TABLET)
-   ========================================== */
+
+  
 @media (max-width: 1024px) {
   .pl-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -221,7 +216,7 @@
   }
   .pl-header {
     flex-direction: column;
-    margin-bottom: 60px; /* Jarak ekstra karena judul turun */
+    margin-bottom: 60px; 
   }
   .pl-btn-kembali {
     position: relative;
@@ -231,6 +226,6 @@
     margin-bottom: 20px;
   }
   .pl-grid {
-    grid-template-columns: 1fr; /* Jadi 1 kolom bersusun ke bawah */
+    grid-template-columns: 1fr; 
   }
 }

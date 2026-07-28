@@ -61,7 +61,7 @@ function Blog() {
 
     
       <div className="blog-footer">
-        <Link to="/kontak" className="blog-btn-kembali">
+        <Link to="/" className="blog-btn-kembali">
           ❮ Kembali
         </Link>
       </div>

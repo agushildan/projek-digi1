@@ -71,7 +71,7 @@ function Layanan() {
         </div>
         
         {/* 7. Mechanical Electrical (BISA DIKLIK) */}
-        <Link to="/mechanical-electrical" className="service-link">
+        <Link to="/mechanic" className="service-link">
           <div className="service-card clickable-card">
             <div className="service-info">
               <h2>Mechanical Electrical</h2>

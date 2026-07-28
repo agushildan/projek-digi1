@@ -8,6 +8,7 @@ import LBeranda from "./layananberanda";
 import Mitra from "./Mitra";
 import Kontak from "./kontak";
 import Footer from "./footer";
+import Kegiatan from "./Kegiatan";
 
 function Beranda() {
   return (
@@ -66,6 +67,10 @@ function Beranda() {
 
 <section className="section-layanan-beranda">
 <LBeranda />
+</section>
+
+<section className="keegiatan">
+<Kegiatan />
 </section>
 
 <section className="section-mitra">

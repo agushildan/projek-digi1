@@ -1,44 +1,56 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom';
-import './conveyor.css';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./conveyor.css";
 
 function Conveyor() {
+  const navigate = useNavigate();
+
   const itemsData = [
-    { id: 1, title: 'Chain', image: 'chain1.jpg' },
-    { id: 2, title: 'Chain', image: 'chain2.jpg' },
-    { id: 3, title: 'Chain', image: '' },
-    { id: 4, title: 'Chain', image: '' },
-    { id: 5, title: 'Chain', image: '' },
-    { id: 6, title: 'Chain', image: '' },
+    { id: 1, title: "Chain", image: "chain1.jpg" },
+    { id: 2, title: "Chain", image: "chain2.jpg" },
+    { id: 3, title: "Chain", image: "chain3.jpg" },
+    { id: 4, title: "Chain", image: "chail4.jpg" },
+    { id: 5, title: "Chain", image: "chain5.jpg" },
+    { id: 6, title: "Chain", image: "chain6.jpg" },
   ];
+
+  const handleBack = () => {
+    const btn = document.querySelector(".conveyor-btn-kembali");
+
+    btn.classList.add("clicked");
+
+    setTimeout(() => {
+      navigate("/Layanan");
+    }, 200);
+  };
 
   return (
     <div className="page-wrapper">
       <main className="content-container">
-        
-       
-        <Link to="/Layanan" className="blog-btn-kembali">
-          ❮ Kembali
-        </Link>
 
-       
+        <button
+          className="conveyor-btn-kembali"
+          onClick={handleBack}
+        >
+          ❮ Kembali
+        </button>
+
         <h1 className="judul-halaman">Produk</h1>
 
-       
         <div className="card-konten">
           <h2 className="judul-produk">Repair Sparepart Conveyor</h2>
 
           <div className="deskripsi-produk">
             <p>
-              PT. Digi Tekno Indonesia bergerak di bidang pemeliharaan, produksi, dan perbaikan, dengan menyediakan berbagai produk dan layanan teknis yang andal dan berkualitas. PT. Digi Tekno Indonesia memproduksi komponen seperti fabrikasi chain untuk kebutuhan industri, serta menyediakan layanan instalasi sistem seperti cooling tower yang mendukung efisiensi operasional pembangkit dan fasilitas industri lainnya.
+            PT Digi Tekno indonesia bergerak di bidang pemeliharaan, produksi,dan perbaikan, dengan menyediakan berbagai produk dan layanan teknis yang andal dan berkualitas. PT Digi Tekno indonesia memproduksi komponen seperti febrikasi chain untuk kebutuhan industri, serta menyediakan layanan instalasi sistem seperti cooling tower yang mendukung efisiensi operasional pembangkit dan fasilitas industri lainnya. 
             </p>
+
             <p>
-              Dalam bidang perawatan dan perbaikan, kami ahli dalam overhaul pompa BFP dan rewinding motor, memastikan peralatan pelanggan kami selalu dalam kondisi optimal. Selain itu, kami juga menyediakan berbagai tools dan alat ukur presisi sebagai pendukung utama dalam proses instalasi, monitoring, dan maintenance.
+              Dalam bidang perawatan dan perbaikan, kami ahli dalama overhaul pompa BFP dan rewinding motor, memastikan peralatan pelanggan kami selalu dalam kondisi optial. Selain itu kami juga menyediakan berbagai tools dan alat ukur presisi sebagai pendukung utama dalam proses instalasi, monitoring  dan maintenance.
             </p>
           </div>
         </div>
 
-       
         <div className="galeri-section">
           <div className="badge-title">Fabrikasi Chain</div>
 
@@ -48,7 +60,9 @@ function Conveyor() {
                 <div className="image-wrapper">
                   <img src={item.image} alt={item.title} />
                 </div>
+
                 <div className="card-divider"></div>
+
                 <p className="card-label">{item.title}</p>
               </div>
             ))}

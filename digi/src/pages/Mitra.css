@@ -18,16 +18,16 @@
 
 .mitra-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom sama besar */
-  gap: 30px; /* Jarak antar kotak */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px;
   max-width: 1200px;
-  margin: 0 auto; /* Memastikan grid berada di tengah */
+  margin: 0 auto; 
 }
 
 .mitra-card {
   background-color: #ffffff;
-  border: 2px solid #825855; /* Warna garis pinggir cokelat kemerahan */
-  border-radius: 8px; /* Sudut melengkung */
+  border: 2px solid #825855; 
+  border-radius: 8px;
   overflow: hidden; 
   box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.08); 
   display: flex;

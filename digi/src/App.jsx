@@ -1,4 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import ScrollToTop from "./pages/ScrollToTop";
 import Navbar from "./components/navbar";
 import Beranda from "./pages/Beranda";
 import Tentang from "./pages/Tentang";
@@ -17,12 +18,19 @@ import Detailproduk from "./pages/detailproduk";
 import Kontak from "./pages/kontak";
 import Footer from "./pages/footer";
 import Conveyor from "./pages/conveyordetail";
+import Mechanic from "./pages/mechanic";
+import General from "./pages/general-supplier";
+import Procurement from "./pages/procurement";
 
 
 function App() {
   return (
     <BrowserRouter>
+
+     <ScrollToTop />
+     
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Beranda />} />
         <Route path="/tentang" element={<Tentang />} />
@@ -34,12 +42,10 @@ function App() {
      
 
 
-        {/* --- ROUTE UNTUK SUBMENU --- */}
-        {/* Submenu dari Tentang Digi */}
+       
         <Route path="/Sertifikasi" element={<Sertifikasi />} />
         
-        {/* 2. UBAH DI SINI: Panggil komponen <VisiMisi /> yang asli */}
-        <Route path="/visi-misi" element={<VisiMisi />} /> 
+       <Route path="/visi-misi" element={<VisiMisi />} /> 
         
         {/* Submenu dari Info */}
         <Route path="/Karir" element={<Karir />} />
@@ -51,6 +57,11 @@ function App() {
         <Route  path="/kontak" element={<Kontak />}/>
         <Route path="/footer" element={<Footer />} />
         <Route path="/conveyordetail" element={<Conveyor />} />
+        <Route path="/mechanic" element={<Mechanic />} />
+        <Route path="/general-supplier" element={<General />} />
+        <Route path="/procurement" element={<Procurement />} />
+
+
 
         
       

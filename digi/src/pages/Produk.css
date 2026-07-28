@@ -21,7 +21,7 @@
 
 .produk-title{
   font-size: 3.5rem;
-  color: #7A2828; /* Warna merah gelap */
+  color: #7A2828;
   font-weight: 900;
   margin: 0;
   margin-right: 15px;
@@ -30,7 +30,7 @@
 }
 
 .produk-logo {
-  height: 120px; /* Sesuaikan ukuran logo */
+  height: 120px; 
   width: auto;
   transform: translate(-8px);
 }
@@ -51,7 +51,7 @@
   align-items: flex-start;
   position: relative;
   margin-top: 20px;
-  top: 75px;
+  top: 15px; /*untuk ngatur si text agar ke ats bawah*/
 }
 
 
@@ -65,7 +65,7 @@
   padding: 12px 25px;
   border-radius: 8px;
   margin-bottom: 20px;
-  box-shadow: 0px 6px 0px #8a3331; /* Efek 3D */
+  box-shadow: 0px 6px 0px #8a3331; 
   transition: all 0.1s;
   cursor: pointer;
   z-index: 10;
@@ -122,7 +122,7 @@
   position: absolute;
   bottom: -40px;
   left: -80px;
-  top:253px;
+  top:20px; /*untuk ngatur si pposisi ketinggian karakter */
 
   z-index: 5;
 }

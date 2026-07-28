@@ -19,7 +19,6 @@
   position: relative;
 }
 
-/* KIRI: TEKS & TOMBOL */
 .beranda-left {
   flex: 1;
   max-width: 50%;
@@ -28,7 +27,6 @@
   z-index: 10;
 }
 
-/* Tipografi Judul */
 .beranda-judul {
   margin-bottom: 25px;
   display: flex;
@@ -55,7 +53,6 @@
   color: #743032 !important;
 }
 
-/* Tipografi Paragraf */
 .beranda-textp {
   margin-bottom: 30px;
 }
@@ -69,7 +66,7 @@
   font-weight: 500 !important;
 }
 
-/* Tombol Contact Us (Efek 3D) */
+
 .beranda-btn {
   display: inline-block;
   padding: 12px 35px;
@@ -90,7 +87,7 @@
   box-shadow: 0px 2px 0px #0b1a30; 
 }
 
-/* KANAN: GAMBAR & ANIMASI */
+
 .beranda-right {
   flex: 1;
   display: flex;
@@ -120,17 +117,12 @@
   top: 70px;
 }
 
-/* ==========================================
-   SEKSI TENTANG (DI BAWAH BERANDA)
-   ========================================== */
+
 .section-tentang {
   width: 100%;
   display: block;
 }
 
-/* ==========================================
-   RESPONSIF (TAMPILAN HP / TABLET)
-   ========================================== */
 @media (max-width: 900px) {
   .beranda-hero {
     flex-direction: column;

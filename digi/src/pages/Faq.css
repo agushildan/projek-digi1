@@ -101,6 +101,7 @@ details[open] .ikon-panah{
     bottom: 40px;
     left: 40px;
     background-color: #d1b4a6;
+    position: absolute;
     border: 2.5px solid #1a2634;
     border-radius: 25px;
     padding: 10px 25px;

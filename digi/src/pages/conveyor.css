@@ -7,12 +7,11 @@
 
 .page-wrapper {
   min-height: 100vh;
-  background-color: #9bbad0; /* Background biru pastel */
+  background-color: #9bbad0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   display: flex;
   flex-direction: column;
 }
-
 
 .content-container {
   flex: 1;
@@ -26,49 +25,48 @@
   width: 100%;
 }
 
-.blog-btn-kembali {
+.conveyor-btn-kembali{
+  background:#e8d4d4;
+  color:#803436;
+  border:3px solid #803436;
+  border-radius:30px;
+  padding:10px 30px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 5px 0 #4a1a1c;
+  transition:all .2s ease;
   position: absolute;
-  top: 50px;
-  left: 24px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 26px;
-  border: 1.5px solid #8b3d3d;
-  border-radius: 9999px;
-  color: #8b3d3d;
-  background-color: #f2dada;
-  font-weight: 700;
-  font-size: 15px;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: all 0.2s ease;
+  top: 20px;
+  left: 20px;
 }
 
-.blog-btn-kembali:hover {
-  background-color: #e8c4c4;
+.conveyor-btn-kembali:hover{
+  background: #dfc4c4;
 }
 
-/* Judul Utama "Produk" (Memberi Space Cukup dari Top) */
+.conveyor-btn-kembali.clicked{
+  transform:translateY(5px);
+  box-shadow:0 0 0 #4a1a1c;
+}
+
 .judul-halaman {
   font-size: 3rem;
   font-weight: 900;
   color: #112233;
   margin-top: 20px;
-  margin-bottom: 50px; /* Jarak longgar ke kartu di bawahnya */
+  margin-bottom: 50px;
   text-align: center;
   letter-spacing: -0.5px;
 }
 
-/* KARTU DESKRIPSI UTAMA */
 .card-konten {
   width: 100%;
-  background-color: #eaf2f8; /* Biru sangat terang / off-white */
-  border-radius: 40px; /* Lengkungan sudut yang lebar */
-  padding: 56px 64px; /* Spacing dalam kartu dibuat lega */
+  background-color: #eaf2f8; 
+  border-radius: 40px; 
+  padding: 56px 64px; 
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-  margin-bottom: 70px; /* Jarak ke bagian galeri di bawahnya */
+  margin-bottom: 70px; 
 }
 
 .judul-produk {
@@ -91,7 +89,6 @@
   margin-bottom: 0;
 }
 
-
 .galeri-section {
   width: 100%;
   display: flex;
@@ -111,7 +108,6 @@
   margin-bottom: 48px;
   text-align: center;
 }
-
 
 .cards-grid {
   display: grid;
@@ -159,13 +155,12 @@
   text-align: center;
 }
 
-
 @media (max-width: 850px) {
   .content-container {
     padding-top: 100px;
   }
 
-  .blog-btn-kembali {
+  .conveyor-btn-kembali {
     top: 30px;
     left: 20px;
   }

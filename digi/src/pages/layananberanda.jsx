@@ -9,7 +9,7 @@ function LBeranda(){
         <img src="digilogo.png" alt="Logo Digi" className="produk-logo" />
       </div>
 
-      <img src="latar digi.jepg" alt="" />   
+      <img src="latar digi.jepg" alt="latar-digi" />   
 
       <div className="services-list">
         
