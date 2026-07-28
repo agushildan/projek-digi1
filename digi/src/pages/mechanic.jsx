@@ -47,19 +47,36 @@ export default function MEchanic() {
     { id: 7, image: 'motor7.jpg', title: 'Rewinding Motor' },
   ];
 
-
-  const toolsSmallGallery = Array.from({ length: 20 }, (_, index) => ({
-    id: index + 1,
-    image: `/images/tool${index + 1}.jpg`, 
-    title: 'Tools'
-  }));
+// Daftar 20 gambar tools dari folder public
+  const toolsSmallGallery = [
+    { id: 1, image: '/tools1.jpg', title: 'Tools' },
+    { id: 2, image: '/tools2.jpg', title: 'Tools' },
+    { id: 3, image: '/tools3.jpg', title: 'Tools' },
+    { id: 4, image: '/tools4.jpg', title: 'Tools' },
+    { id: 5, image: '/tools5.jpg', title: 'Tools' },
+    { id: 6, image: '/tools6.jpg', title: 'Tools' },
+    { id: 7, image: '/tools7.jpg', title: 'Tools' },
+    { id: 8, image: '/tools8.jpg', title: 'Tools' },
+    { id: 9, image: '/tools9.jpg', title: 'Tools' },
+    { id: 10, image: '/tools10.jpg', title: 'Tools' },
+    { id: 11, image: '/tools11.jpg', title: 'Tools' },
+    { id: 12, image: '/tools12.jpg', title: 'Tools' },
+    { id: 13, image: '/tools13.jpg', title: 'Tools' },
+    { id: 14, image: '/tools14.jpg', title: 'Tools' },
+    { id: 15, image: '/tools15.jpg', title: 'Tools' },
+    { id: 16, image: '/tools16.jpg', title: 'Tools' },
+    { id: 17, image: '/tools17.jpg', title: 'Tools' },
+    { id: 18, image: '/tools18.jpg', title: 'Tools' },
+    { id: 19, image: '/tools19.jpg', title: 'Tools' },
+    { id: 20, image: '/tools20.jpg', title: 'Tools' },
+  ];
 
 
   const toolsBigGallery = [
-    { id: 21, image: 'https://via.placeholder.com/600x400?text=Mesin+Tools+1', title: 'Tools' },
-    { id: 22, image: 'https://via.placeholder.com/600x400?text=Mesin+Tools+2', title: 'Tools' },
-    { id: 23, image: 'https://via.placeholder.com/600x400?text=Mesin+Tools+3', title: 'Tools' },
-    { id: 24, image: 'https://via.placeholder.com/600x400?text=Mesin+Tools+4', title: 'Tools' },
+    { id: 21, image: '1.jpg', title: 'Tools' },
+    { id: 22, image: '2.jpg', title: 'Tools' },
+    { id: 23, image: '3.jpg', title: 'Tools' },
+    { id: 24, image: '4.jpg', title: 'Tools' },
   ];
 
   return (
