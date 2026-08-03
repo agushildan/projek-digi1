@@ -9,7 +9,6 @@ function Detailproduk() {
   return (
     <div className="dp-page-container">
       
-      {/* Tombol Kembali Kiri Atas */}
       <Link to="/" className="dp-btn-kembali">
         ❮ Kembali
       </Link>
@@ -59,22 +58,18 @@ function Detailproduk() {
    
       <div className="dp-cards-grid">
         
-        {/* Kartu 1 */}
-        <div className="dp-card">
-          {/* Ikon berubah tergantung state isDenganMIS */}
-          <div className={`dp-icon ${isDenganMIS ? 'icon-check' : 'icon-cross'}`}>
-            {isDenganMIS ? '✓' : '✗'}
-          </div>
-        </div>
-
-        {/* Kartu 2 */}
         <div className="dp-card">
           <div className={`dp-icon ${isDenganMIS ? 'icon-check' : 'icon-cross'}`}>
             {isDenganMIS ? '✓' : '✗'}
           </div>
         </div>
 
-        {/* Kartu 3 */}
+        <div className="dp-card">
+          <div className={`dp-icon ${isDenganMIS ? 'icon-check' : 'icon-cross'}`}>
+            {isDenganMIS ? '✓' : '✗'}
+          </div>
+        </div>
+
         <div className="dp-card">
           <div className={`dp-icon ${isDenganMIS ? 'icon-check' : 'icon-cross'}`}>
             {isDenganMIS ? '✓' : '✗'}

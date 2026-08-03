@@ -1,12 +1,12 @@
-.footer-container{
+.footer-container {
     background-color: #1e324c;
-    color: #ffff;
+    color: #ffffff;
     padding: 30px 50px;
-    font-family: 'Nunito' sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin-top: 50px;
 }
 
-.footer-content{
+.footer-content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -15,83 +15,105 @@
     gap: 40px;
 }
 
-.footer-col{
+.footer-col {
     flex: 1;
     min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
 }
 
-.col-company  h2{
-font-size: 1.4rem;
-font-weight: 800;
-margin-top: 0;
-margin-bottom: 10px;
-text-align: center;
+
+.col-company h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
-.footer-logo{
+.footer-logo {
     width: 150px;
-    margin-bottom: -10px;
+    margin-bottom: 10px;
     display: block;
-    margin-left: 70px ;
+    margin-left: 0; 
 }
 
-
-.social-icons{
-display: flex;
-gap: 15px;
-margin-bottom: 25px;
-margin-left: 76px;
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    margin-left: 0; 
 }
 
-.icon-box{
+.icon-box {
     background-color: #1e324c;
     width: 40px;
     height: 40px;   
     border-radius: 8px;
     display: flex;
-   align-items: center;
-   justify-content: center;
-   text-decoration: none;
-   transition: opacity 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
-.icon-box:hover{
+.icon-box:hover {
     opacity: 0.8;
 }
 
-.copyright{
+.copyright {
     font-size: 0.9rem;
     color: #e0e0e0;
     margin: 0;
+    text-align: left;
 }
 
-.col-services,
-.col-contact{
-    font-size: 1.2rem;
-    font-weight: 700;
+.col-services {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.services-title {
+    text-align: center; 
+    width: 100%;
     margin-top: 0;
     margin-bottom: 25px;
-    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
-.col-services ul{
+.services-list-items {
     padding-left: 20px;
     margin: 0;
+    text-align: left;
 }
 
-.col-services li{
+.services-list-items li {
     margin-bottom: 12px;
     font-size: 0.95rem;
     line-height: 1.5;
+    text-align: left;
 }
 
-.contact-list{
+.col-contact h3 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.contact-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
 .contact-item {
@@ -100,19 +122,54 @@ margin-left: 76px;
     gap: 15px;
 }
 
-.contact-item svg{
+.contact-item svg {
     width: 24px;
     height: 24px;
-    fill: #ffff;
+    fill: #ffffff;
     flex-shrink: 0;
     margin-top: 2px;
 }
 
-.contact-item p{
+.contact-item p {
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.6;
     text-align: left;
 }
 
+@media (max-width: 768px) {
+.footer-container {
+    padding: 30px 20px;
+}
+
+.footer-content{
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+}
+.footer-col{
+    width: 100%;
+    min-width: auto;
+    align-items: flex-start;
+    text-align: left;
+}
+.services-title{
+    text-align: center;
+}
+.services-list-items{
+    padding-left: 18px;
+    margin: 0;
+    text-align: center;
+}
+.col-contact h3{
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+}
+ 
 

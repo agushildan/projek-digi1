@@ -6,12 +6,12 @@ function General() {
   const navigate = useNavigate();
 
   const itemsData = [
-    { id: 1, title: "Chain", image: "chain1.jpg" },
-    { id: 2, title: "Chain", image: "chain2.jpg" },
-    { id: 3, title: "Chain", image: "chain3.jpg" },
-    { id: 4, title: "Chain", image: "chail4.jpg" },
-    { id: 5, title: "Chain", image: "chain5.jpg" },
-    { id: 6, title: "Chain", image: "chain6.jpg" },
+    { id: 1, title: "Chain", image: "chain1.webp" },
+    { id: 2, title: "Chain", image: "chain2.webp" },
+    { id: 3, title: "Chain", image: "chain3.webp" },
+    { id: 4, title: "Chain", image: "chail4.webp" },
+    { id: 5, title: "Chain", image: "chain5.webp" },
+    { id: 6, title: "Chain", image: "chain6.webp" },
   ];
 
   const handleBack = () => {

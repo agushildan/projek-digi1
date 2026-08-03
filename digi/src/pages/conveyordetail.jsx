@@ -6,12 +6,12 @@ function Conveyor() {
   const navigate = useNavigate();
 
   const itemsData = [
-    { id: 1, title: "Chain", image: "chain1.jpg" },
-    { id: 2, title: "Chain", image: "chain2.jpg" },
-    { id: 3, title: "Chain", image: "chain3.jpg" },
-    { id: 4, title: "Chain", image: "chail4.jpg" },
-    { id: 5, title: "Chain", image: "chain5.jpg" },
-    { id: 6, title: "Chain", image: "chain6.jpg" },
+    { id: 1, title: "Chain", image: "chain1.webp" },
+    { id: 2, title: "Chain", image: "chain2.webp" },
+    { id: 3, title: "Chain", image: "chain3.webp" },
+    { id: 4, title: "Chain", image: "chail4.webp" },
+    { id: 5, title: "Chain", image: "chain5.webp" },
+    { id: 6, title: "Chain", image: "chain6.webp" },
   ];
 
   const handleBack = () => {
@@ -44,7 +44,6 @@ function Conveyor() {
             <p>
             PT Digi Tekno indonesia bergerak di bidang pemeliharaan, produksi,dan perbaikan, dengan menyediakan berbagai produk dan layanan teknis yang andal dan berkualitas. PT Digi Tekno indonesia memproduksi komponen seperti febrikasi chain untuk kebutuhan industri, serta menyediakan layanan instalasi sistem seperti cooling tower yang mendukung efisiensi operasional pembangkit dan fasilitas industri lainnya. 
             </p>
-
             <p>
               Dalam bidang perawatan dan perbaikan, kami ahli dalama overhaul pompa BFP dan rewinding motor, memastikan peralatan pelanggan kami selalu dalam kondisi optial. Selain itu kami juga menyediakan berbagai tools dan alat ukur presisi sebagai pendukung utama dalam proses instalasi, monitoring  dan maintenance.
             </p>
@@ -53,7 +52,7 @@ function Conveyor() {
 
         <div className="galeri-section">
           <div className="badge-title">Fabrikasi Chain</div>
-
+                           
           <div className="cards-grid">
             {itemsData.map((item) => (
               <div key={item.id} className="card-item">

@@ -1,4 +1,3 @@
-
 .tentang-page {
   background-color: #E6F1F8; 
   min-height: 100vh;
@@ -28,14 +27,10 @@
 }
 
 .tentang-top-logo {
-  height: 150px;
-  top: 100px;
+  height: 100px;
   width: auto;
   object-fit: contain;
-
-  transform: translateY(3px);
 }
-
 
 .browser-card {
   background-color: #ffffff;
@@ -46,7 +41,6 @@
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
-
 
 .browser-header {
   display: flex;
@@ -63,8 +57,8 @@
 }
 
 .dot {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -73,7 +67,6 @@
 .dot-blue-light { background-color: #88bcd8; }
 .dot-blue { background-color: #4a8db7; }
 
-
 .browser-arrows {
   display: flex;
   gap: 10px;
@@ -81,13 +74,12 @@
   font-weight: bold;
   color: #826a5c;
   cursor: pointer;
-  user-select: none;
 }
 
 .browser-address-bar {
   flex: 1;
   border: 2px solid #826a5c;
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 6px 15px;
   display: flex;
   justify-content: space-between;
@@ -98,69 +90,104 @@
   background-color: #ffffff;
 }
 
-.search-icon {
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
 .browser-home-icon {
   font-size: 1.3rem;
   color: #826a5c;
-  cursor: pointer;
 }
 
 .browser-body {
   padding: 40px;
   display: flex;
-  gap: 40px;
-  align-items: center;
+  gap: 30px;
+  align-items: flex-start;
 }
 
-
 .browser-text-content {
-  flex: 1.2;
+  flex: 1;
 }
 
 .browser-text-content p {
   font-size: 0.95rem;
-  color: #444444;
+  color: #333333;
   line-height: 1.6;
   margin-bottom: 18px;  
   text-align: justify;
 }
 
-.browser-text-content p:last-child {
-  margin-bottom: 0;
-}
-
-
 .browser-image-content {
-  flex: 0.9;
-  display: flex;
-  justify-content: center;
+  float: right;
+  margin-left: 90px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .browser-img-gedung {
-  width: 100%;
-  max-width: 380px;
+  width: 320px;
   height: auto;
-  border-radius: 18px; 
+  border-radius: 14px; 
   object-fit: cover;
   display: block;
 }
 
+
+
 @media (max-width: 850px) {
-  .browser-body {
-    flex-direction: column;
-    padding: 25px 20px;
-  }
   
-  .browser-header {
-    gap: 10px;
-    padding: 12px 15px;
+  .tentang-page {
+    padding: 30px 15px;
   }
-  
+
+  .tentang-top-header {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
   .tentang-title-text {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  .tentang-top-logo {
+    height: 70px;
+    transform: translateX(-7px);
+    margin-top: 7px;
+  }
+
+  .browser-header {
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .browser-home-icon {
+    display: none;
+  }
+
+  .browser-address-bar {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+
+  .browser-body {
+    padding: 20px 15px;
+    display: block; 
+  }
+
+  .browser-image-content {
+    float: right;         
+    width: 45%;              
+    margin-left: 12px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+
+  .browser-img-gedung {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .browser-text-content p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 12px;
   }
 }

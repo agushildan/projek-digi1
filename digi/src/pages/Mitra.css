@@ -1,6 +1,5 @@
-
 .mitra-container {
-  background-color:#DFEEF8; 
+  background-color: #DFEEF8; 
   min-height: calc(100vh - 80px);
   padding: 50px 80px;
   font-family: Arial, sans-serif;
@@ -15,7 +14,6 @@
   letter-spacing: 1px;
 }
 
-
 .mitra-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
@@ -26,15 +24,14 @@
 
 .mitra-card {
   background-color: #ffffff;
-  border: 2px solid #825855; 
-  border-radius: 8px;
+  border: 2.5px solid #825855; 
+  border-radius: 12px;
   overflow: hidden; 
   box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.08); 
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease; 
 }
-
 
 .mitra-card:hover {
   transform: translateY(-5px);
@@ -56,12 +53,11 @@
 
 .control-btn {
   color: #825855;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   user-select: none;
 }
-
 
 .mitra-card-body {
   padding: 20px;
@@ -79,30 +75,38 @@
 }
 
 
-@media (max-width: 1024px) {
-  .mitra-grid {
-    grid-template-columns: repeat(3, 1fr); 
-  }
-  .mitra-container {
-    padding: 40px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .mitra-grid {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-  .mitra-title {
-    font-size: 2.5rem;
-  }
-}
 
 @media (max-width: 480px) {
-  .mitra-grid {
-    grid-template-columns: 1fr; 
-  }
   .mitra-container {
-    padding: 30px 20px;
+    min-height: auto !important;   
+    height: auto !important;
+    padding-top: 30px;
+    padding-bottom: 20px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .mitra-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 14px;
+    margin-bottom: 0 !important;   
+  }
+
+  .mitra-card-body {
+    height: 90px;
+    padding: 10px;
+  }
+
+  .mitra-window-controls {
+    gap: 8px;
+  }
+
+  .control-btn {
+    font-size: 0.8rem;
+  }
+
+  .mitra-card:nth-child(n+5) {
+    display: none !important;
   }
 }
+

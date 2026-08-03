@@ -69,7 +69,6 @@
   text-align: justify;
 }
 
-/* GAMBAR BERTUMPUK */
 .konten-gambar {
   position: relative;
   width: 100%;
@@ -133,7 +132,6 @@
   align-items: flex-start; 
 }
 
-/* Lingkaran Ikon Umum */
 .dp-icon {
   width: 60px;
   height: 60px;
@@ -145,14 +143,12 @@
   font-weight: bold;
 }
 
-/* Ikon Centang (MIS Aktif) */
 .icon-check {
   background-color: #d4edda;
   color: #28a745;
   border: 2px solid #28a745;
 }
 
-/* Ikon Silang (Tanpa MIS) */
 .icon-cross {
   background-color: #f8d7da;
   color: #dc3545;

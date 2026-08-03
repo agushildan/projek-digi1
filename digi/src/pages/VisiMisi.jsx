@@ -12,8 +12,10 @@ function VisiMisi() {
 
         <div className="isi">
 
-          <span className="clip">📎</span>
-
+          <span className="clip">
+            <img src="icons8-clip-50(1).png" alt="clip" />
+          </span>
+  
           <p>
             Menjadi perusahaan yang inovatif, berperforma tinggi,
             independen, profesional, berkomitmen dan bertanggung jawab
@@ -32,7 +34,10 @@ function VisiMisi() {
 
         <div className="isi">
 
-          <span className="clip merah">📎</span>
+          <span className="clip merah">
+                        <img src="icons8-clip-50(2).png" alt="clip" />
+
+          </span>
 
           <ul>
             <li>memberikan solusi dan produk terbaik sesuai kebutuhan </li>

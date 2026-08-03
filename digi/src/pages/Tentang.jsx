@@ -5,7 +5,6 @@ function Tentang() {
   return (
     <div className="tentang-page">
       
-    
       <div className="tentang-top-header">
         <h1 className="tentang-title-text">Tentang</h1>
         <img src="digilogo.png" alt="Logo Digi" className="tentang-top-logo" />
@@ -13,7 +12,6 @@ function Tentang() {
 
       <div className="browser-card">
         
-      
         <div className="browser-header">
           <div className="browser-dots">
             <span className="dot dot-red"></span>
@@ -36,25 +34,24 @@ function Tentang() {
           </div>
         </div>
 
-       
+      
         <div className="browser-body">
           
-        
           <div className="browser-text-content">
             <p>
               PT Digi Tekno Indonesia didirikan pada tahun 2022 yang beralamat di Summarecon Gedebage Bandung.
             </p>
+            
+            <div className="browser-image-content">
+              <img src="depan digi.png" alt="Gedung Digi" className="browser-img-gedung" />
+            </div>
+
             <p>
               PT Digi Tekno Indonesia terdiri dari tim yang inovatif, berdedikasi tinggi dan cerdas untuk membantu pelaku bisnis dalam menjalankan operasional menjadi lebih mudah dan cepat, sehingga dapat meningkatkan profitabilitas.
             </p>
             <p>
               Kami berfokus untuk memberikan kelebihan yang kompetitif bagi pelanggan dengan teknologi yang dimiliki dan dapat menumbuhkan bisnis dengan sumber daya yang optimal. Hal ini akan menghasilkan kepuasan bagi masyarakat dengan pelayanan yang baik serta aman.
             </p>
-          </div>
-
-       
-          <div className="browser-image-content">
-            <img src="depan digi.png" alt="Gedung Digi" className="browser-img-gedung" />
           </div>
 
         </div>

@@ -47,12 +47,13 @@ const Faq = () => {
     ))}
       </div>
 
- <Link to="/" className="btn-kembali">
-        <svg style={{ marginTop:"4.5px"}} width="18" height="18" fill="none" stroke="#1a2634" strokeWidth="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path>
-        </svg>
-        Kembali
-      </Link>
+<Link to="/" className="btn-kembali">
+  <svg width="18" height="18" fill="none" stroke="#1a2634" strokeWidth="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path>
+  </svg>
+  Kembali
+</Link>
+
     </div>
   )
 }

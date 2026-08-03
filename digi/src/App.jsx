@@ -21,6 +21,7 @@ import Conveyor from "./pages/conveyordetail";
 import Mechanic from "./pages/mechanic";
 import General from "./pages/general-supplier";
 import Procurement from "./pages/procurement";
+import Lainnya from "./pages/kegiatanlainnya";
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
         <Route path="/produk" element={<Produk />} />
         <Route path="/layanan" element={<Layanan />} />
         <Route path="/mitra" element={<Mitra />} />
-        <Route path="/kegiatan" element={<Kegiatan />} />
+        <Route path="/Kegiatan" element={<Kegiatan />} />
         <Route path="/info" element={<Info />} />
      
 
@@ -47,7 +48,6 @@ function App() {
         
        <Route path="/visi-misi" element={<VisiMisi />} /> 
         
-        {/* Submenu dari Info */}
         <Route path="/Karir" element={<Karir />} />
         <Route path="/Faq" element={<Faq />} />
         <Route path="/Blog" element={<Blog />} />
@@ -60,6 +60,8 @@ function App() {
         <Route path="/mechanic" element={<Mechanic />} />
         <Route path="/general-supplier" element={<General />} />
         <Route path="/procurement" element={<Procurement />} />
+        <Route path="/kegiatanlainnya.jsx" element={<Lainnya />} />
+
 
 
 

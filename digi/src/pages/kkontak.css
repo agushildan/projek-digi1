@@ -16,9 +16,8 @@
   margin-top: 20px;
 }
 
-/* Styling Subjudul */
 .kontak-subtitle {
-  color: #4A4A4A; 
+  color: #3B413B; 
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -27,7 +26,6 @@
   margin-top: 20px;
 }
 
-/* Mengatur form agar ukurannya pas dan berada di tengah */
 .kontak-form {
   width: 100%;
   max-width: 600px;
@@ -36,7 +34,6 @@
   gap: 20px;
 }
 
-/* Memisahkan label dan input secara vertikal */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -50,7 +47,6 @@
   margin-bottom: 8px;
 }
 
-/* Styling untuk Input Nama, Email, dan Textarea Pesan */
 .form-group input,
 .form-group textarea {
   color: #142745;
@@ -65,25 +61,21 @@
   transition: border-color 0.3s ease;
 }
 
-/* Mengubah warna garis saat kotak diklik (fokus) */
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #4A90E2; 
 }
 
-/* Mencegah textarea ditarik ke samping, hanya bisa ke bawah */
 .form-group textarea {
   resize: vertical;
   font-family: inherit;
 }
 
-/* Posisi tombol submit */
 .form-submit {
   text-align: left;
   margin-top: 10px;
 }
 
-/* Styling Tombol Kirim */
 .btn-kirim {
   background-color: #1C355E; 
   color: white;
@@ -97,8 +89,19 @@
   transition: transform 0.2s, background-color 0.2s;
 }
 
-/* Efek saat tombol disorot */
 .btn-kirim:hover {
   background-color: #142745;
   transform: translateY(-2px);
+}
+
+
+@media (max-width: 480px) {
+  .kontak-subtitle{
+    font-size: 1.5rem;
+    color: #3B413B;
+  }
+
+  .kontak-title{
+    color: #4F8DC0;
+  }
 }

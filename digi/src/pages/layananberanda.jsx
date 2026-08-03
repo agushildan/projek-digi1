@@ -6,10 +6,9 @@ function LBeranda(){
           <div className="layanan-container">
       <div className="produk-header">
         <h1 className="produk-title-layanan">Layanan</h1>
-        <img src="digilogo.png" alt="Logo Digi" className="produk-logo" />
+        <img src="digilogo.png" alt="Logo Digi" className="produk-logo1" />
       </div>
 
-      <img src="latar digi.jepg" alt="latar-digi" />   
 
       <div className="services-list">
         

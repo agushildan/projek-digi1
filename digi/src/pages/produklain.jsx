@@ -16,8 +16,8 @@ function ProdukLain() {
       
         <div className="pl-title-wrapper">
           <h1 className="pl-title">Produk</h1>
-         
-          <img src="logo-digi.png" alt="Logo Digi" className="pl-logo" />
+        
+          <img src="digilogo.png" alt="Logo Digi" className="pl-logo" />
         </div>
       </div>
 
@@ -32,7 +32,7 @@ function ProdukLain() {
           <div className="pl-img-wrapper">
             <img src="kanan.png" alt="MIS DIGI" className="pl-card-img" />
           </div>
-
+                                                             
          <Link to="/detailproduk" className="pl-btn-detail">
           Detail Produk
         </Link>

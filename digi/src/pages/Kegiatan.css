@@ -1,0 +1,186 @@
+.kegiatan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #C0DCF1;
+    padding: 80px 8%;
+    font-family: arial, sans-serif;
+    gap: 60px;
+}
+
+.kegiatan-kiri {
+    flex: 1;
+    max-width: 600px;
+}
+
+.judul-biru {
+    color: #4F8DC0;
+    font-size: 5rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+.textp{
+    margin-bottom: 35px;
+}
+.btn-untuk-berpindah-halamana{
+    background-color: #AA4343;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.2s;
+}
+
+.btn-untuk-berpindah-halaman:hover {
+    opacity: 0.9;
+}
+
+.ig-card {
+    flex: 1;
+    max-width: 450px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-icon-digi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.ig-header-kiri {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ig-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    object-fit: cover;
+    border: 1px solid #eaeaea;
+}
+
+.nama-ig {
+    font-weight: bold;
+    color: #262626;
+    font-size: 0.95rem;
+}
+
+.gambar-kegiatan {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+
+.gambar-kegiatan img {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.icon-dibawah-gambar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 10px;
+}
+
+.left-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.ig-details {
+    margin-top: 5px;
+}
+
+.ig-likes {
+    font-weight: 700;
+    color: #262626;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.ig-caption {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: #8e8e8e;
+}
+
+.ig-caption strong {
+    color: #262626;
+    margin-right: 5px;
+}
+
+.ig-date {
+    font-size: 0.75rem;
+    color: #8e8e8e;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 1200px) {
+  .kegiatan-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 30px 20px !important;
+    gap: 30px !important;
+    margin-top: 70px;
+  }
+
+  .kegiatan-kiri {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .judul-biru {
+    font-size: 2.5rem !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    font-weight: 600;
+  }
+
+  .btn-untuk-berpindah-halaman {
+    width: 100% !important;
+    max-width: 320px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  .ig-card {
+    width: 100% !important;
+    max-width: 400px !important;
+    box-sizing: border-box !important;
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .kegiatan-container {
+    padding: 20px 15px !important;
+  }
+
+  .ig-card {
+    padding: 12px !important;
+  }
+}
