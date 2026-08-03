@@ -4,7 +4,6 @@ import './procurement.css';
 
 export default function Procurement() {
 
-  // 1. Data Galeri Pompa BFP
   const pompaGalleryTop = [
     { id: 1, image: 'pompa1.webp', title: 'Pompa BFP' },
     { id: 2, image: 'pompa2.webp', title: 'Pompa BFP' },
@@ -18,7 +17,6 @@ export default function Procurement() {
     { id: 7, image: 'pompa7.webp', title: 'Pompa BFP' },
   ];
 
-  // 2. Data Galeri Turbin
   const turbinGalleryTop = [
     { id: 1, image: 'turbin1.jpg', title: 'Pemasangan Sealstrip Turbin' },
     { id: 2, image: 'turbin2.jpg', title: 'Pemasangan Sealstrip Turbin' },
@@ -30,7 +28,6 @@ export default function Procurement() {
     { id: 5, image: 'turbin5.jpg', title: 'Pemasangan Sealstrip Turbin' },
   ];
 
-  // 3. Data Galeri Rewinding Motor
   const rewindingGalleryTop = [
     { id: 1, image: 'motor1.jpg', title: 'Rewinding Motor' },
     { id: 2, image: 'motor2.jpg', title: 'Rewinding Motor' },
@@ -48,10 +45,8 @@ export default function Procurement() {
     <div className="page-container">
       <div className="content-wrapper">
 
-        {/* Header Section - sekarang pakai komponen shared */}
         <Header title="Produk" fallbackPath="/" />
 
-        {/* Main Info Card */}
         <div className="main-card">
           <h2 className="card-title">Procurement of Engine and Turbine Components and Spare Part</h2>
           <div className="card-body">
@@ -64,7 +59,6 @@ export default function Procurement() {
           </div>
         </div>
 
-        {/* Section 1: Overhaul Pompa BFP */}
         <div className="gallery-section">
           <div className="header-badges">
             <div className="badge-main">
@@ -103,7 +97,6 @@ export default function Procurement() {
           </div>
         </div>
 
-        {/* Section 2: Pemasangan Sealstrip Turbin */}
         <div className="gallery-section" style={{ marginTop: '80px' }}>
           <div className="header-badges">
             <div className="badge-main text-multiline">
@@ -138,7 +131,6 @@ export default function Procurement() {
           </div>
         </div>
 
-        {/* Section 3: Rewinding Motor */}
         <div className="gallery-section" style={{ marginTop: '80px' }}>
           <div className="header-badges">
             <div className="badge-main text-multiline">
