@@ -26,14 +26,14 @@ const resources = {
       hero_title_2: "YOUR BUSINESS",
       hero_title_3: "BETTER THAN OTHER",
       hero_desc_1: "PT Digi Tekno Indonesia adalah perusahaan yang bergerak di bidang konsultan IT, jasa service mesin manufaktur, pengadaan sparepart dan material.",
-      hero_desc_2: "Kami berkomitmen memberikan pelayanan dan kualitas produk yang terbaik untuk Anda.",
+      hero_desc_2: "kami berkomitmen memberikan pelayanan dan kualitas produk yang terbaik untuk Anda.",
       contact_us: "Contact Us",
 
       /* tentang */
       hero_title_4: "Tentang",
-      isi_1: "PT Digi Tekno Indonesia didirikan pada tahun 2022 yang beralamat di Summarecon Gedebage Bandung.",
-      isi_2: "PT Digi Tekno Indonesia terdiri dari tim yang inovatif, berdedikasi tinggi dan cerdas untuk membantu pelaku bisnis dalam menjalankan operasional menjadi lebih mudah dan cepat, sehingga dapat meningkatkan profitabilitas.",
-      isi_3: "Kami berfokus untuk memberikan kelebihan yang kompetitif bagi pelanggan dengan teknologi yang dimiliki dan dapat menumbuhkan bisnis dengan sumber daya yang optimal. Hal ini akan menghasilkan kepuasan bagi masyarakat dengan pelayanan yang baik serta aman.",
+      isi_1: "PT Digi Tekno Indonesia didirikan pada tahun 2022 yang berlokasi di Summarecon Gedebage, Bandung Jawa Barat",
+      isi_2: "PT Digi Tekno Indonesia terdiri dari tim yang inovatif, berdedikasi, dan cerdas untuk membantu bisnis membuat operasi lebih mudah dan lebih cepat, sehingga meningkatkan profitabilitas.",
+      isi_3: "Kami fokus pada penyediaan keunggulan kompetitif bagi pelanggan dengan layanan, teknologi, dan dapat mengembangkan bisnis dengan sumber daya yang optimal.",
 
       /* visi misi */
       judul_visi: "VISI",
@@ -218,9 +218,9 @@ isi_paragraft99:"Dalam bidang perawatan dan perbaikan kami ahli dalam overhaul p
 
       /* tentang */
       hero_title_4: "About",
-      isi_1: "PT Digi Tekno Indonesia was established in 2022 and is located at Summarecon Gedebage, Bandung.",
-      isi_2: "PT Digi Tekno Indonesia comprises an innovative, highly dedicated, and intelligent team that helps business owners streamline their operations making them faster and easier thereby boosting profitability.",
-      isi_3: "We focus on providing a competitive advantage to our customers through our technology, enabling business growth with optimal resource utilization. This results in public satisfaction driven by excellent and secure service.",
+      isi_1: "PT Digi Tekno Indonesia was established in 2022 and is located in Summarecon Gedebage, Bandung, West Java.",
+      isi_2: "PT Digi Tekno Indonesia comprises an innovative, dedicated, and intelligent team that helps businesses make operations easier and faster, thereby increasing profitability.",
+      isi_3: "We focus on providing a competitive advantage to our customers through services and technology, enabling them to grow their businesses using optimal resources.",
 
       /* visi dan misi */
       judul_visi: "VISION",

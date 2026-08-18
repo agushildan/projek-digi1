@@ -58,7 +58,9 @@ function Tentang() {
     strokeWidth="2.5"
     strokeLinecap="round"
   />
-</svg>            </span>
+</svg>            
+
+      </span>
           </div>
 
           <div className="browser-home-icon">
@@ -82,7 +84,7 @@ function Tentang() {
                 className="browser-img-gedung"
               />
             </div>
-
+             
             <p>{t("isi_2")}</p>
             <p>{t("isi_3")}</p>
           </div>

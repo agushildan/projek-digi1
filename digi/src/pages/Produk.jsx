@@ -42,7 +42,7 @@ function ModelProduk() {
     <primitive 
       object={scene} 
       scale={3} 
-      position={[-0.5, -3.9, 3]} 
+      position={[-0.5, -3.6, 2]} 
     />
   );
 }

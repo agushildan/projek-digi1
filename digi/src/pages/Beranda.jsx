@@ -31,7 +31,7 @@ function Model3D() {
     <primitive 
       object={scene} 
       scale={2.2}             
-      position={[-1, -2, 0]}
+      position={[-1, -2, 1]}
       rotation={[0, 1, 0]}    
     />
   );
