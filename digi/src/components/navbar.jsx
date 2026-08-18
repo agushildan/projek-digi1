@@ -39,7 +39,7 @@ function Navbar() {
     { keywords: ["tentang", "about","tentang kami","about us","profil","company profile","company"], route: "/#tentang" },
     { keywords: ["karir", "career","job","jobs","lowongan","lowongan kerja","rekrutmen","recruitment","join us","bekerja"], route: "/karir" },
     { keywords: ["faq","help","bantuan","tanya jawab","question","informasi umum","bantuan"], route: "/faq" },
-    { keywords: ["blog","artikel","articles","berita","news","informasi","berita perusahaan","tips","update"], route: "/blog" },
+    { keywords: ["blog","tes","artikel","articles","berita","news","informasi","berita perusahaan","tips","update"], route: "/blog" },
   ];
 
   const closeAllMenus = () => {
