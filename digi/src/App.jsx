@@ -17,12 +17,16 @@ import Produklain from "./pages/produklain";
 import Detailproduk from "./pages/detailproduk";
 import Kontak from "./pages/kontak";
 import Footer from "./pages/footer";
+import Mechanicalnew from "./pages/mechanicalnew";
 import Conveyor from "./pages/conveyordetail";
-import Mechanic from "./pages/mechanic";
 import General from "./pages/general-supplier";
 import Procurement from "./pages/procurement";
 import Lainnya from "./pages/kegiatanlainnya";
-
+import Software from "./pages/software defelopment";
+import Service from "./pages/service";
+import Hardware from "./pages/hardware";
+import Consultan from "./pages/itconsultan";
+import Install from "./pages/installation";
 
 function App() {
   return (
@@ -52,20 +56,20 @@ function App() {
         <Route path="/Faq" element={<Faq />} />
         <Route path="/Blog" element={<Blog />} />
 
-         <Route path="/produklain" element={<Produklain />}/>
+        <Route path="/produklain" element={<Produklain />}/>
         <Route path="/detailproduk" element={<Detailproduk />} />
         <Route  path="/kontak" element={<Kontak />}/>
         <Route path="/footer" element={<Footer />} />
         <Route path="/conveyordetail" element={<Conveyor />} />
-        <Route path="/mechanic" element={<Mechanic />} />
+        <Route path="/mechanicalnew" element={<Mechanicalnew />} />
         <Route path="/general-supplier" element={<General />} />
         <Route path="/procurement" element={<Procurement />} />
         <Route path="/kegiatanlainnya.jsx" element={<Lainnya />} />
-
-
-
-
-        
+        <Route path="/software defelopment" element={<Software />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/hardware" element={<Hardware />} />
+        <Route path="/itconsultan" element={<Consultan />} />
+        <Route path="/installation" element={<Install />} />
       
       </Routes>
     </BrowserRouter>

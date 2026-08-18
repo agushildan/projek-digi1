@@ -1,6 +1,8 @@
-import React from "react";
+import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./general-supplier.css";
+import i18n from "../i18n";
+import ImageWithSkeleton from "../components/ImageWithSkeleton";
 
 function General() {
   const navigate = useNavigate();
@@ -24,6 +26,22 @@ function General() {
     }, 200);
   };
 
+
+    const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+  const t = (key) => i18n.t(key);
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+                                                 
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
+
   return (
     <div className="page-wrapper">
       <main className="content-container">
@@ -32,21 +50,21 @@ function General() {
           className="conveyor-btn-kembali"
           onClick={handleBack}  
         >
-          ❮ Kembali
+          ❮ {t("btn_kembali")}
         </button>
 
-        <h1 className="judul-halaman">Produk</h1>
+        <h1 className="judul-halaman">{t("judul_produk")}</h1>
 
         <div className="card-konten">
           <h2 className="judul-produk">General Suplier</h2>
 
           <div className="deskripsi-produk">
             <p>
-              PT Digi Tekno Indonesia bergerak di bidang pemeliharaan produksi dan perbaikan dengan menyediakan berbagai produk dan layanan teknis dan andal yang berkualaitas PT Digi Tekno Indonesia memproduksi komponen seperti fablikasi chaim untuk kebutuhan industri serta menyediakan layanan instalasi siste seperti cooling tower yang mendukung efisiensi operasional pembangkit dan fasilitas industri lainnya.
+              {t("isi_layanann9")}
             </p>
 
             <p>
-              Dalam bidang perawatan dan perbaikan kami ahli dalam overhaul pompa BFP dan rewinding motor,memastikan peralatan pelanggan kami selalu dalam kondisi optimal. selain itu, kami juga menyediakan berbagai tools dan alat ukur presisi sebagai pendukung utama dalam proses,instalasi  monitoring dan maintenence
+              {t("isi_paragraft99")}
             </p>
           </div>
         </div>
@@ -68,6 +86,7 @@ function General() {
             ))}
           </div>
         </div>
+
 
       </main>
     </div>

@@ -1,6 +1,8 @@
-import React, { useEffect, Suspense } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, useAnimations } from "@react-three/drei";
+import { useLocation } from "react-router-dom"; 
+import i18n from "../i18n"; 
 import LatarDigi from "../assets/latar digi.png"; 
 import "./Beranda.css";
 import Tentang from "./Tentang";
@@ -11,6 +13,7 @@ import Mitra from "./Mitra";
 import Kontak from "./kontak";
 import Footer from "./footer";
 import Kegiatan from "./Kegiatan";
+import ImageWithSkeleton from "../components/ImageWithSkeleton";
 
 function Model3D() {
   const { scene, animations } = useGLTF("/models/animasipertama.glb");
@@ -29,32 +32,59 @@ function Model3D() {
       object={scene} 
       scale={2.2}             
       position={[-1, -2, 0]}
-rotation={[0, 1, 0]}    
-/>
+      rotation={[0, 1, 0]}    
+    />
   );
 }
 
 function Beranda() {
+  const location = useLocation();
+
+  const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+
+  const t = (key) => i18n.t(key);
+
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace("#", "");
+
+      const timer = setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+
+      return () => clearTimeout(timer);
+    }
+  }, [location]);
+
   return (
     <div className="beranda-container">
       <div className="beranda-hero">
         
         <div className="beranda-left">
           <div className="beranda-judul"> 
-            <h1 className="teks-biru">WE MAKE</h1>
-            <h1 className="teks-merah">YOUR BUSINESS</h1>
-            <h1 className="teks-biru">BETTER THAN OTHER</h1>
+            <h1 className="teks-biru">{t("hero_title_1")}</h1>
+            <h1 className="teks-merah">{t("hero_title_2")}</h1>
+            <h1 className="teks-biru">{t("hero_title_3")}</h1>
           </div>
 
           <div className="beranda-textp">
-            <p>
-              PT Digi Tekno Indonesia adalah perusahaan yang bergerak di bidang
-              konsultan IT, jasa service mesin manufaktur, pengadaan sparepart dan material.
-            </p>
-            <p>
-              Kami berkomitmen memberikan pelayanan dan kualitas produk yang terbaik
-              untuk Anda.
-            </p>
+            <p>{t("hero_desc_1")}</p>
+            <p>{t("hero_desc_2")}</p>
           </div>
             
           <a 
@@ -63,7 +93,7 @@ function Beranda() {
             target="_blank" 
             rel="noopener noreferrer"
           >
-            Contact Us
+            {t("contact_us")}
           </a>
         </div>
 
@@ -91,13 +121,13 @@ function Beranda() {
 
       </div>
 
-      <section className="section-tentang"><Tentang /></section>  
-      <section className="section-visi-misi"><VisiMisi /></section>
-      <section className="section-product"><Produk /></section>
-      <section className="section-layanan-beranda"><LBeranda /></section>
-      <section className="keegiatan"><Kegiatan /></section>
-      <section className="section-mitra"><Mitra /></section>
-      <section className="section-kontak" id="/kontak"><Kontak /></section>
+      <section className="section-tentang" id="tentang"><Tentang /></section>  
+      <section className="section-visi-misi" id="visi-misi"><VisiMisi /></section>
+      <section className="section-product" id="produk"><Produk /></section>
+      <section className="section-layanan-beranda" id="layanan-beranda"><LBeranda /></section>
+      <section className="keegiatan" id="kegiatan"><Kegiatan /></section>
+      <section className="section-mitra" id="mitra"><Mitra /></section>
+      <section className="section-kontak" id="kontak"><Kontak /></section>
       <section className="section-footer"><Footer /></section>
     </div>
   );

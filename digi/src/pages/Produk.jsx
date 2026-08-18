@@ -1,7 +1,30 @@
-import React, { useEffect, Suspense } from "react";
+import React, { useEffect, Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, useAnimations, OrbitControls } from "@react-three/drei";
 import "./Produk.css";
+import i18n from "../i18n";
+import ImageWithSkeleton from "../components/ImageWithSkeleton";
+
+const dataProduk = [
+  {
+    id: 1,
+    title: "MIS DIGI",
+    subtitle: "( Management Information System DIGI )",
+    image: "kanan.png",
+  },
+  {
+    id: 2,
+    title: "ERP System",
+    subtitle: "( Enterprise Resource Planning )",
+    image: "1.jpg", 
+  },
+  {
+    id: 3,
+    title: "Custom App",
+    subtitle: "( Tailor-made Business Solution )",
+    image: "2.jpg", 
+  },
+];
 
 function ModelProduk() {
   const { scene, animations } = useGLTF("/models/animasiProduk(2).glb");
@@ -19,18 +42,47 @@ function ModelProduk() {
     <primitive 
       object={scene} 
       scale={3} 
-      position={[-0.5, -4, 3]} 
+      position={[-0.5, -3.9, 3]} 
     />
   );
 }
 
 function Produk() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? dataProduk.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === dataProduk.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  
+  const currentItem = dataProduk[currentIndex];
+  const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+  const t = (key) => i18n.t(key);
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
   return (
     <div className="produk-container">
       
       <div className="produk-header">
-        <h1 className="produk-title-layanan1">Produk</h1>
-        <img src="digilogo.png" alt="Logo Digi" className="produk-logo" />
+        <h1 className="produk-title-layanan1">{t("judul_produk")}</h1>
       </div>
 
       <div className="produk-btn-mobile">
@@ -39,7 +91,7 @@ function Produk() {
           rel="noopener noreferrer" 
           className="produk-btn-merah"
         >
-          Lihat produk lainnya disini
+        {t("produk_lainnya")}
         </a>
       </div>
 
@@ -48,11 +100,10 @@ function Produk() {
         <div className="produk-left-desktop">
           <a 
             href="/produklain" 
-            target="_blank" 
             rel="noopener noreferrer" 
             className="produk-btn-merah"
           >
-            Lihat produk lainnya disini
+            {t("produk_lainnya")}
           </a>
 
           <div className="produk-speech-bubble">
@@ -61,9 +112,10 @@ function Produk() {
           </div>
 
           <div className="produk-3d-wrapper">
-            <Canvas camera={{ position: [0, 0.5, 8], fov: 45 }}
-            gl={{localClippingEnabled: true}}>
-              
+            <Canvas 
+              camera={{ position: [0, 0.5, 8], fov: 45 }}
+              gl={{ localClippingEnabled: true }}
+            >
               <ambientLight intensity={1.8} />
               <directionalLight position={[10, 10, 5]} intensity={2} />
               <pointLight position={[-10, -10, -10]} intensity={1} />
@@ -75,37 +127,39 @@ function Produk() {
               <OrbitControls enableZoom={false} />
             </Canvas>
           </div>
-
         </div>
 
         <div className="produk-right-card">
           
           <div className="produk-text-section">
             <ul className="produk-list">
-              <li>Produk dan jasa PT Digi Tekno Indonesia dapat digunakan di berbagai macam industri dan bisnis.</li>
-              <li>PT Digi Tekno Indonesia dapat menyesuaikan produk kami sesuai dengan kebutuhan anda.</li>
-              <li>Kami juga berkomitmen untuk menyediakan layanan dan produk yang efektif, hemat biaya dan cepat.</li>
-              <li>PT Digi Tekno Indonesia terdiri dari tim yang berdedikasi untuk memastikan semua produk dan jasa yang diberikan memenuhi kebutuhan spesifik anda.</li>
-              <li>Kami pun berfokus memberikan layanan dan solusi di bisnis anda untuk meningkatkan kinerja bisnis.</li>
+              <li>{t("produk1")}</li>
+              <li>{t("produk2")}</li>
+              <li>{t("produk3")}</li>
+              <li>{t("produk4")}</li>
+              <li>{t("produk5")}</li>
             </ul>
           </div>
 
           <div className="produk-slider-section">
             <div className="produk-slider-box">
-              <img src="kanan.png" alt="MIS DIGI Preview" className="produk-slider-img" />
+              <img 
+                src={currentItem.image} 
+                alt={currentItem.title} 
+                className="produk-slider-img" 
+              />
               
               <div className="produk-slider-controls">
-                <button className="slider-arrow">❮</button>
-                <button className="slider-arrow">❯</button>
-              </div>
-              
-              <h3 className="produk-slider-title">MIS DIGI</h3>
-              <p className="produk-slider-subtitle">( Management Information System DIGI )</p>
+                <button className="slider-arrow" onClick={handlePrev}>❮</button>
+                <button className="slider-arrow" onClick={handleNext}>❯</button>
+              </div>          
+
+              <h3 className="produk-slider-title">{currentItem.title}</h3>
+              <p className="produk-slider-subtitle">{currentItem.subtitle}</p>
             </div>
           </div>
 
         </div>
-
       </div>
     </div>
   );

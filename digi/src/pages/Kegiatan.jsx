@@ -1,23 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal } from 'lucide-react';
 import './Kegiatan.css'; 
+import Footer from './footer';
+import i18n from "../i18n";
+import ImageWithSkeleton from "../components/ImageWithSkeleton";
 
 function Kegiatan() {
+
+  const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+
+  const t = (key) => i18n.t(key);
+
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
+
+
   const [isLiked, setIsLiked] = useState(true); 
   const [isSaved, setIsSaved] = useState(true); 
 
   return (
+    
     <div className="kegiatan-container">
       
       <div className="kegiatan-kiri">
-        <h1 className="judul-biru">Kegiatan</h1>
+        <h1 className="judul-biru">{t("judul_kegiatan")}</h1>
         <div className="textp">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt tempus leo non porta. Vivamus sem tellus, pulvinar ut rhoncus sed, maximus id lectus. Donec viverra fermentum turpis. Donec ornare euismod iaculis. Cras vulputate, diam non gravida convallis, ipsum neque dapibus nunc, eu pulvinar orci dui at nisl. Nulla rutrum eget odio in venenatis.</p>
+          <p>{t("isi_kegiatan")}</p>
         </div>
         <div className="btn-liakegiatanlain">
           <Link to="/kegiatanlainnya.jsx" className="btn-untuk-berpindah-halamana">
-            Lihat Kegiatan Lainnya Disini
+          {t("btn_kegiatan")}
           </Link>
         </div>
       </div>
@@ -67,13 +90,14 @@ function Kegiatan() {
         <div className="ig-details">
           <p className="ig-likes">2,022 likes</p>
           <p className="ig-caption">
-            <strong>digiteknoindo</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt tempus leo non porta. dolor sit amet
+            <strong>digiteknoindo</strong> {t("isi_kegiatan")}
           </p>
           <p className="ig-date">July 15, 2026</p>
         </div>
       </div>
-
-    </div>
+ </div>
+ 
+ 
   );
 }
 

@@ -1,6 +1,8 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./conveyor.css";
+import i18n from "../i18n";
+import ImageWithSkeleton from "../components/ImageWithSkeleton";
 
 function Conveyor() {
   const navigate = useNavigate();
@@ -24,16 +26,33 @@ function Conveyor() {
     }, 200);
   };
 
+    const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+  const t = (key) => i18n.t(key);
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
+
   return (
     <div className="page-wrapper">
       <main className="content-container">
 
-        <button
+       <div className="top-bar">
+         <button
           className="conveyor-btn-kembali"
           onClick={handleBack}
         >
-          ❮ Kembali
+          ❮ {t("btn_kembali")}
         </button>
+       </div>
 
         <h1 className="judul-halaman">Produk</h1>
 
@@ -42,10 +61,10 @@ function Conveyor() {
 
           <div className="deskripsi-produk">
             <p>
-            PT Digi Tekno indonesia bergerak di bidang pemeliharaan, produksi,dan perbaikan, dengan menyediakan berbagai produk dan layanan teknis yang andal dan berkualitas. PT Digi Tekno indonesia memproduksi komponen seperti febrikasi chain untuk kebutuhan industri, serta menyediakan layanan instalasi sistem seperti cooling tower yang mendukung efisiensi operasional pembangkit dan fasilitas industri lainnya. 
+              {t("isi_layanann8")}
             </p>
             <p>
-              Dalam bidang perawatan dan perbaikan, kami ahli dalama overhaul pompa BFP dan rewinding motor, memastikan peralatan pelanggan kami selalu dalam kondisi optial. Selain itu kami juga menyediakan berbagai tools dan alat ukur presisi sebagai pendukung utama dalam proses instalasi, monitoring  dan maintenance.
+              {t("isi_paragraft88")}
             </p>
           </div>
         </div>

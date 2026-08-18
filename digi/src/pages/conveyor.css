@@ -24,20 +24,17 @@
   width: 100%;
 }
 
-.conveyor-btn-kembali{
-  background:#e8d4d4;
-  color:#803436;
-  border:3px solid #803436;
-  border-radius:30px;
-  padding:10px 30px;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
-  box-shadow:0 5px 0 #4a1a1c;
-  transition:all .2s ease;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.conveyor-btn-kembali {
+  background: #e8d4d4;
+  color: #803436;
+  border: 3px solid #803436;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #4a1a1c;
+  transition: box-shadow .15s ease;
 }
 
 .conveyor-btn-kembali:hover{
@@ -45,7 +42,6 @@
 }
 
 .conveyor-btn-kembali.clicked{
-  transform:translateY(5px);
   box-shadow:0 0 0 #4a1a1c;
 }
 
@@ -106,6 +102,13 @@
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   margin-bottom: 48px;
   text-align: center;
+}
+
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;  
 }
 
 .cards-grid {
@@ -180,7 +183,60 @@
 }
 
 @media (max-width: 600px) {
+
+.top-bar{
+  margin-bottom: 15px;
+}
+
+
+.content-container{
+  padding: 20px 15px 50px;
+  align-items: stretch;
+}
+
+.conveyor-btn-kembali{
+  margin-top: -30px;
+  position: static;
+  font-size: 16px;
+  padding: 8px 20px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  margin-left: -20px;
+  font-size: 16px;
+  padding: 8px 20px;
+}
+
+.judul-halaman{
+  font-size: 2rem;
+  margin: 0 0 25px;
+  width: 100%;
+  text-align: center;
+transform: translateY(30px);
+}
+
+.card-konten{
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.judul-produk{
+  font-size: 1.5rem;
+}
+
+.deskripsi-produk p{
+  font-size: 15px;
+}
+
+.badge-title{
+  font-size: 1.4rem;
+  padding: 10px 24px;
+}
+
   .cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .image-wrapper{
+    height: 200px;
   }
 }

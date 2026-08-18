@@ -1,8 +1,28 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { Link } from "react-router-dom";
 import "./serti.css";
+import Footer from "./footer";
+import i18n from "../i18n";
+import ImageWithSkeleton from "../components/ImageWithSkeleton";
 
 function Sertifikasi() {
+
+  const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+  const t = (key) => i18n.t(key);
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
+
+
   const [zoomedImage, setZoomedImage] = useState(null);
 
   const tutupZoom = () => {
@@ -10,14 +30,15 @@ function Sertifikasi() {
   };
 
   return (
+    <>
     <div className="sertifikasi-container">
       
-      <h1 className="sertifikasi-title">Sertifikasi</h1>
+      <h1 className="sertifikasi-title">{t("sertifikasi")}</h1>
 
       <div className="sertifikasi-grid">
         <div className="sertifikasi-frame">
-          <div className="sertifikasi-frame-inner" onClick={() => setZoomedImage("gambar-sertifikat-1.jpg")}>
-            <img src="gambar-sertifikat-1.jpg" alt="Sertifikat 1" className="sertifikasi-img" />
+          <div className="sertifikasi-frame-inner" onClick={() => setZoomedImage("sertifikat.jp")}>
+            <img src="sertifikat.jp" alt="Sertifikat 1" className="sertifikasi-img" />
           </div>
         </div>
 
@@ -55,7 +76,7 @@ function Sertifikasi() {
       <div className="sertifikasi-floor"></div>
 
       <Link to="/" className="sertifikasi-btn-kembali">
-        ❮ Kembali
+        ❮ {t("btn_kembali")}
       </Link>
       
       {zoomedImage && (
@@ -66,6 +87,14 @@ function Sertifikasi() {
       )}
 
     </div>
+
+
+<section className="footer bagian sertifikasi">
+<Footer />
+</section>
+
+
+    </>
   );
 }
 

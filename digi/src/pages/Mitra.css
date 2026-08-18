@@ -1,8 +1,8 @@
 .mitra-container {
   background-color: #DFEEF8; 
-  min-height: calc(100vh - 80px);
-  padding: 50px 80px;
+  padding: 50px 0;
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 .mitra-title {
@@ -14,15 +14,27 @@
   letter-spacing: 1px;
 }
 
-.mitra-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+.mitra-slider-wrapper {
+  width: 100%;
+  overflow: hidden; 
+  position: relative;
+  display: flex;
+}
+
+.mitra-track {
+  display: flex;
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto; 
+  width: max-content;
+  animation: scrollRunning 20s linear infinite; 
+}
+
+.mitra-track:hover {
+  animation-play-state: paused;
 }
 
 .mitra-card {
+  width: 240px; 
+  flex-shrink: 0;
   background-color: #ffffff;
   border: 2.5px solid #825855; 
   border-radius: 12px;
@@ -74,39 +86,27 @@
   object-fit: contain; 
 }
 
-
-
-@media (max-width: 480px) {
-  .mitra-container {
-    min-height: auto !important;   
-    height: auto !important;
-    padding-top: 30px;
-    padding-bottom: 20px !important;
-    padding-left: 15px;
-    padding-right: 15px;
+@keyframes scrollRunning {
+  0% {
+    transform: translateX(0);
   }
-
-  .mitra-grid {
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 14px;
-    margin-bottom: 0 !important;   
-  }
-
-  .mitra-card-body {
-    height: 90px;
-    padding: 10px;
-  }
-
-  .mitra-window-controls {
-    gap: 8px;
-  }
-
-  .control-btn {
-    font-size: 0.8rem;
-  }
-
-  .mitra-card:nth-child(n+5) {
-    display: none !important;
+  100% {
+    transform: translateX(-50%); 
   }
 }
 
+@media (max-width: 480px) {
+  .mitra-card {
+    width: 200px; 
+  }
+
+  .mitra-card-body {
+    height: 100px;
+    padding: 10px;
+  }
+
+  .mitra-track {
+    gap: 15px;
+    animation-duration: 15s; 
+  }
+}

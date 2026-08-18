@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -41,23 +45,6 @@
   position: relative;
 }
 
-.menu a:hover,
-.dropdown-trigger:active,
-.menu-aktif,
-.submenu li a:active{
-    background-color: #C0DCF1;
-    color: black;
-    border-radius: 8px;
-    padding:  6px 12px;
-    transition: background-color 0.15s ease;
-}
-
-.menu li a:hover,
-.menu li a:focus{
-    background-color: #C0DCF1;
-    color: black !important;
-    border-radius: 6px;
-}
 .menu a,
 .dropdown-trigger {
   text-decoration: none;
@@ -66,12 +53,30 @@
   font-size: 0.95rem;
   cursor: pointer;
   white-space: nowrap; 
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
 }
 
 .menu a:hover,
 .dropdown-trigger:hover,
-.menu-aktif {
-  color: black;
+.dropdown-trigger:active,
+.menu-aktif,
+.submenu li a:active {
+  background-color: #C0DCF1;
+  color: black !important;
+  border-radius: 8px;
+  transform: scale(1.05);
+  transition: background-color 0.15s ease;
+}
+
+.menu-aktif,
+.menu a.active {
+  background-color: #C0DCF1;
+  color: #000000 !important;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
 }
 
 .submenu {
@@ -132,9 +137,50 @@
   white-space: nowrap;
 }
 
-@media (max-width: 850px) {
+.nav-right-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-  .hp-btn{
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  color: #0088cc;
+}
+
+.lang-btn.active {
+  color: #0088cc;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.lang-divider {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .hp-btn {
     display: block !important;
     background: none;
     border: none;
@@ -157,9 +203,9 @@
   .nav-menu-wrapper {
     display: none;
     position: fixed;
-    top: 70px;/* untuk ketinggian si menu navbar*/
-    left: 50%;/* yang ini ke kanan kiri nya*/
-    transform: translate(-50%);
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 85%;
     max-width: 380px;
     background-color: #f7fafc;
@@ -173,7 +219,6 @@
 
   .nav-menu-wrapper.open {
     display: flex;
-    animation: popuTop 0.3s cubic-bezier(0.175,0.885, 0.32, 1275) forwards;
   }
 
   .mobile-header {
@@ -218,10 +263,16 @@
     background: transparent;
   }
 
+  .nav-right-container {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    gap: 12px;
+  }
+
   .search-box {
     width: 100%;
-    margin-top: 20px;
-    display: none !important;
+    display: none;
   }
 
   .search-box input {

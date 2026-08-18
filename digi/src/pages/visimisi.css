@@ -7,44 +7,31 @@
 .visimisi{
 
     width:100%;
-    min-height:100vh;
     background:#C0DCF1E5;
     display:flex;
     justify-content:center;
     align-items:flex-start;
-
     gap:90px;
-
     padding:80px 70px;
 }
-
-
 
 .card{
 
     width:470px;
 }
 
-
 .judul{
-
     width:330px;
     height:72px;
-
     margin:0 auto 35px;
-
     border-radius:50px;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     border:3px solid #333;
-
     box-shadow:
-    5px 7px 0 #000000;  /* buat si warna brder judul vsii dan misi*/
-
-    transform: translateX(65px);
+    5px 7px 0 #000000;
+transform: translateX(65px);
 
 }
 
@@ -61,48 +48,29 @@
 .judul h1{
 
     color:white;
-
     font-size:52px;
-
     letter-spacing:2px;
-
     font-weight:900;
-    
-    
+      
 }
-
-
 
 .isi{
-
-    position:relative;
-
-    background:white;
-
+position:relative;
+background:white;
     border-radius:25px;
-
     padding:70px 35px 35px;
-
     box-shadow:0 10px 20px rgba(0,0,0,.18);
-
     min-height:450px;
-
     margin-top: 40px;
 }
-
-
 
 .clip{
 
     position:absolute;
-
     top:-20px;
     left:20px;
-
     font-size:58px;
-
     transform:rotate(-20deg);
-
     color:#58b7db;
 }
 
@@ -111,74 +79,101 @@
     color:#cc6a6a;
 }
 
-
 .isi p{
 
-    font-size:19px;
-
-    line-height:1.8;
-
+    font-size:20px;
+    line-height:2;
     color:#333;
-
-    text-align:justify;
+    text-align:left;
 }
 
 .isi ul{
-
-    padding-left:28px;
+padding-left:28px;
 }
 
 .isi li{
-
-    margin-bottom:20px;
-
+ margin-bottom:20px;
     font-size:18px;
-
     line-height:1.6;
-
-    color:#333;
-
-    text-align:justify;
+color:#333;
+     text-align:left;
 }
 
 .isi li::marker{
-
     color:#cc6a6a;
-
-    font-size:28px;
+    font-size:20px;
 }
 
 
 @media(max-width:1000px){
 
 .visimisi{
-
-    flex-direction:column;
+flex-direction:column;
 padding: 40px 20px;
     align-items:center;
+    gap: 50px;
 }
 
 .card{
 max-width: 450px;
     width:100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .judul{
-transform: translateX(35px) !important; /* buat geser posisi si judil vis misi*/
-margin: 0 auto 20px auto;
-    width:280px;
-
-    margin-left: auto;
-    margin-right: auto;
+    width: 240px;
+    height: 55px;
+    margin: 0 auto 20px auto;
+    z-index: 2;
+    transform: none !important;
 }
+
 
 .judul h1{
-
-    font-size:38px;
+font-size:38px;
 }
 .isi{
-    min-height: auto;
-    padding: 60px 25px 30px;
+width:  100%;
+min-height: auto;
+padding: 60px 25px 30px;
 }
+}
+
+@media (max-width: 768px) {
+    .visimisi{
+        padding: 50px 20px;
+        gap: 40px;
+    }
+    .card{
+        max-width: 100%;
+    }
+
+    .judul{
+        width: 240px;
+        height: 55px;
+        margin: 0 auto 20px auto;
+        z-index: 2;
+        transform: none !important;
+    }
+    .judul h1{
+        font-size: 30px;
+    }
+
+    .isi{
+        width: 100%;
+        min-height: auto;
+        padding: 45px 20px 25px;
+    }
+
+    .isi p{
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .isi li{
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
 }

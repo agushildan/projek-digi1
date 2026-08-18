@@ -1,8 +1,26 @@
-import React, { useEffect } from 'react'; 
+import React, { useEffect,useState } from 'react'; 
 import { Link, useLocation } from 'react-router-dom';
 import './Layanan.css'; 
+import i18n from '../i18n';
+import ImageWithSkeleton from '../components/ImageWithSkeleton';
 
 function Layanan() {
+
+  const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+  const t = (key) => i18n.t(key);
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
+
   const location = useLocation();
 
   useEffect(() => {
@@ -20,69 +38,88 @@ function Layanan() {
   return (
     <div className="layanan-container">
       <div className="produk-header">
-        <h1 className="produk-title-layanan">Layanan</h1>
-        <img src="digilogo.png" alt="Logo Digi" className="produk-logo1" />
+        <h1 className="produk-title-layanan">{t("judul_layanan")}</h1>
       </div>
 
       <div className="services-list">
-        
-        <div className="service-card" id="software-development">
-          <div className="service-info">
-            <h2>Software Development</h2>
-            <p>Mengembangkan aplikasi perangkat lunak dengan teknologi informasi berbasis web dan mobile aplikasi.</p>
+       
+        <Link to="/software defelopment" className="service-link" id="procurement-card">
+          <div className="service-card clickable-card">
+            <div className="service-info">
+              <h2>Sofware Development</h2>
+              <p>{t("subjudul1")}</p>
+            </div>
+            <img src="Software Development.webp" alt="software developent" className="service-image" />
           </div>
-          <img src="sofware developent.png" alt="Software Development" className="service-image" />
-        </div>
+        </Link>
 
-        <div className="service-card" id="services-maintenance">
-          <div className="service-info">
-            <h2>Services and Maintenance</h2>
-            <p>Memberikan jasa perbaikan dan pemeliharaan baik untuk software, hardware ataupun infrastruktur.</p>
+        <Link to="/service" className="service-link" id="procurement-card">
+          <div className="service-card clickable-card">
+            <div className="service-info">
+              <h2>Services and Maintenance</h2>
+              <p>
+                {t("subjudul2")}
+              </p>
+            </div>
+            <img src="service and maintanance.webp" alt="Services and Maintenance" className="service-image" />
           </div>
-          <img src="service and maintanance.png" alt="Services and Maintenance" className="service-image" />
-        </div>
+        </Link>
 
-        <div className="service-card" id="it-equipment">
-          <div className="service-info">
-            <h2>IT Equipment/Hardware & Networking</h2>
-            <p>Memasok barang dan suku cadang barang IT untuk bisnis dan produk anda dengan misi kepuasan pelanggan dan pengiriman cepat. Pengadaan barang atau perangkat dan infrastruktur.</p>
-          </div>
-          <img src="hardware and networking.png" alt="IT Equipment" className="service-image" />
-        </div>
 
-        <div className="service-card" id="it-consultant">
-          <div className="service-info">
-            <h2>IT Consultant & Problem Solving</h2>
-            <p>Memberikan solusi masukan dan mengevaluasi sistem IT di perusahaan anda untuk meningkatkan kinerja perusahaan.</p>
+        <Link to="/hardware" className="service-link" id="procurement-card">
+          <div className="service-card clickable-card">
+            <div className="service-info">
+              <h2>IT Equipment/Hardware & Networking</h2>
+              <p>
+                {t("subjudul3")}
+              </p>
+            </div>
+            <img src="hardware and networking.webp" alt="IT Equipment" className="service-image" />
           </div>
-          <img src="it consultan.png" alt="IT Consultant" className="service-image" />
-        </div>
+        </Link>
+
+        <Link to="/itconsultan" className="service-link" id="procurement-card">
+          <div className="service-card clickable-card">
+            <div className="service-info">
+              <h2>IT Consultant & Problem Solving</h2>
+              <p>{t("subjudul4")}</p>
+            </div>
+            <img src="it consultan.webp" alt="IT Consultant" className="service-image" />
+          </div>
+        </Link>
+
 
         <Link to="/procurement" className="service-link" id="procurement-card">
           <div className="service-card clickable-card">
             <div className="service-info">
               <h2>Procurement of Engine and Turbine Components and Spare Part</h2>
-              <p>Kami siap membantu dalam pengadaan komponen industri baik berupa komponen yang sudah jadi ataupun masih berupa bahan baku atau material. Adapun bahan material dapat berupa bahan dari dalam negeri atau luar negeri.</p>
+              <p>{t("subjudul5")}</p>
             </div>
-            <img src="procurement.png" alt="Procurement" className="service-image" />
+            <img src="procurement.webp" alt="Procurement" className="service-image" />
           </div>
         </Link>
 
-        <div className="service-card" id="electrical-automation">
-          <div className="service-info">
-            <h2>Installation Electrical and Automation Equipment</h2>
-            <p>Dengan semakin berkembangnya teknologi kelistrikan dan otomasi, maka kami siap membantu semua pengadaaan produk-produk otomasi dan IoT (Internet of Thing).</p>
+
+
+        <Link to="/installation" className="service-link" id="procurement-card">
+          <div className="service-card clickable-card">
+            <div className="service-info">
+              <h2>Installation Electrical and Autmatic Equipment</h2>
+              <p>{t("subjudul6")}</p>
+            </div>
+            <img src="electrical.webp" alt="Insallation" className="service-image" />
           </div>
-          <img src="Installlation Electrical.png  " alt="Installation" className="service-image" />
-        </div>
+        </Link>
+
+       
         
-        <Link to="/mechanic" className="service-link" id="mechanical-card">
+        <Link to="/mechanicalnew" className="service-link" id="mechanical-card">
           <div className="service-card clickable-card">
             <div className="service-info">
               <h2>Mechanical Electrical</h2>
-              <p>Layanan Mechanical Electrical dari PT Digi Tekno Indonesia mencakup instalasi, perawatan, hingga troubleshooting sistem mekanik dan elektrikal pada berbagai fasilitas industri dan bangunan komersial.</p>
+              <p>{t("subjudul7")}</p>
             </div>
-            <img src="electrical.png" alt="Mechanical Electrical" className="service-image" />
+            <img src="Mechanical Electrical.webp" alt="Mechanical Electrical" className="service-image" />
           </div>
         </Link>
 
@@ -90,9 +127,9 @@ function Layanan() {
           <div className="service-card clickable-card">
             <div className="service-info">
               <h2>Repair Sparepart Conveyor</h2>
-              <p>Layanan berfokus pada perbaikan dan rekondisi komponen conveyor yang rusak atau aus akibat penggunaan industri yang intensif. Kami menangani berbagai jenis sistem conveyor, termasuk belt, roller, chain, dan screw conveyor.</p>
+              <p>{t("subjudul8")}nten</p>
             </div>
-            <img src="conveyor.png" alt="Repair Conveyor" className="service-image" />
+            <img src="conveyor.webp" alt="Repair Conveyor" className="service-image" />
           </div>
         </Link>
         
@@ -100,9 +137,9 @@ function Layanan() {
           <div className="service-card clickable-card">
             <div className="service-info">
               <h2>General Supplier</h2>
-              <p>Kami menjembatani kebutuhan klien terhadap Mesin, Tools, Belt, PC, Server, dll, dengan kualitas terbaik dan waktu pengadaan yang efisien berasal dari lokal maupun import. Dengan jaringan mitra yang luas, kami mampu menyediakan solusi pengadaan yang sesuai dengan spesifikasi yang dibutuhkan.</p>
+              <p>{t("subjudul9")}</p>
             </div>
-            <img src="General Supplier.png" alt="General Supplier" className="service-image" />
+            <img src="General Supplier.webp" alt="General Supplier" className="service-image" />
           </div>
         </Link>
 

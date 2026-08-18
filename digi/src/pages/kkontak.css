@@ -95,13 +95,29 @@
 }
 
 
-@media (max-width: 480px) {
-  .kontak-subtitle{
-    font-size: 1.5rem;
-    color: #3B413B;
+@media (max-width: 1024px) {
+
+  .kontak-container,
+  .section.kontak{
+    padding-top: 20px !important;
+    margin-top: -30px !important;
   }
 
-  .kontak-title{
-    color: #4F8DC0;
+  .section-mitra{
+    margin-bottom: 20px !important;
+    padding-bottom: 0px !important;
   }
 }
+
+@media (max-width: 600px) {
+  .kontak-container,
+  .margin-top{
+    padding-top: 10px !important;
+    margin-top: 0px !important;
+  }
+
+.section-mitra {
+  margin-bottom: 10px !important;
+}
+
+}  

@@ -1,43 +1,65 @@
-import React from "react";
+import { useState,useEffect } from "react";
 import "./karir.css"
 import Footer from "./footer";
+import i18n from "../i18n";
+import ImageWithSkeleton from "../components/ImageWithSkeleton";
 
 function Karir() {
+
+const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+  const t = (key) => i18n.t(key);
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
   return (
+    <>
     <div className="karir-container">
       
    <div className="karir-left">
   
-  <h1 className="karir-greeting">Hallo!</h1>
+  <h1 className="karir-greeting">{t("halo")}</h1>
   
   <div className="karir-title-group">
-    <h2 className="karir-title">Mulai Karir</h2>
-    <h2 className="karir-title">Anda</h2>
+    <h2 className="karir-title">{t("mulai")}</h2>
   </div>
   
   <h2 className="karir-title inline-di">
-    di <img src="digilogo.png" alt="Logo Digi" className="karir-logo-inline" />
+    {t("di")} <img src="digilogo.png" alt="Logo Digi" className="karir-logo-inline" />
   </h2>
 
-        <p className="karir-subtitle">Kami sedang membuka lowongan di bagian :</p>
+        <p className="karir-subtitle">{t("subjudul")}</p>
 
         <ul className="karir-jobs-list">
           <li>
             <strong className="karir-job-title">Marketing</strong>
             <p className="karir-job-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in ornare nisl.
+              {t("isi_marketing")}
             </p>
           </li>
           <li>
             <strong className="karir-job-title">Purchasing</strong>
             <p className="karir-job-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in ornare nisl.
+              {t("isi_purchasing")}
             </p>
           </li>
         </ul>
 
-        <button className="karir-btn-lamar">Lamar Sekarang</button>
-      </div>
+<button 
+  className="karir-btn-lamar" 
+  onClick={() => window.open('https://wa.me/6283186405391?text=Halo%20saya%20ingin%20melamar', '_blank')}
+>
+  {t("btn_lamar")}
+</button>
+ </div>
 
 
       <div className="karir-right">
@@ -47,6 +69,13 @@ function Karir() {
         </div>
       </div>
     </div>
+
+<section className="footer-karir">
+  <Footer />
+</section>
+
+
+    </>
   );
 }
 

@@ -1,7 +1,27 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./footer.css";
+import i18n from "../i18n";
+import ImageWithSkeleton from "../components/ImageWithSkeleton";
 
 const Footer = () => {
+
+  const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+
+  const t = (key) => i18n.t(key);
+
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
+
   return (
     <footer className="footer-container">
       <div className="footer-content">
@@ -28,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-col col-services">
-          <h3 className="services-title">Layanan Digi</h3>
+          <h3 className="services-title">{t("layanan_digi")}</h3>
           <ul className="services-list-items">
             <li>Sofware Development</li>
             <li>Services And Maintanance</li>
@@ -40,11 +60,11 @@ const Footer = () => {
         </div>
   
         <div className="footer-col col-contact">
-          <h3 >Kontak Kami</h3>
+          <h3 >{t("kontak_kami")}</h3>
           <ul className="contact-list">
             <li className="contact-item">
               <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-              <p>Sumarecon Magma Commercial Blokk MD-18,Summarecon Gedebage Bandung - Jawa Barat 40294</p>
+              <p>Sumarecon Magma Commercial Blok MD-18,Summarecon Gedebage Bandung - Jawa Barat 40294</p>
             </li>
             <li className="contact-item">
               <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>

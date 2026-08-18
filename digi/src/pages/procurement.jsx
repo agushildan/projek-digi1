@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import './procurement.css';
+import ImageWithSkeleton from '../components/ImageWithSkeleton';
 
 export default function Procurement() {
+  const { t } = useTranslation();
 
   const pompaGalleryTop = [
     { id: 1, image: 'pompa1.webp', title: 'Pompa BFP' },
@@ -45,27 +48,27 @@ export default function Procurement() {
     <div className="page-container">
       <div className="content-wrapper">
 
-        <Header title="Produk" fallbackPath="/" />
+        {/* Header menggunakan translasi */}
+        <Header title={t("judul_produk")} fallbackPath="/" />
 
         <div className="main-card">
           <h2 className="card-title">Procurement of Engine and Turbine Components and Spare Part</h2>
           <div className="card-body">
-            <p>
-              PT Digi tekno indonesia bergerak di bidang pemeliharaan produksi dan perbaikan dengan menyediakan berbagai produk dan layanan teknis yang andal dan berkualitas PT Digi Tekno indonesia memproduksi komponen seperti fabrikasi chain untuk kebutuhan industri serta menyediakan layanan instalasi sistem seperti cooling tower yang mendukung efisiensi operasioanal pembangkit dan fasilitas industri lainnya.
-            </p>
-            <p>
-              Dalam bidang perawatan dan perbaikan kami ahli dalam overhaul pompa BFP dan rewinding motor memastikan peralatan pelanggan kami selalu dalam kondisi optimal Selain itu kami juga menyediakan berbagai tools dan alat ukur presisi sebagai pendukung utama dalam proses instalasi monitoring dan maintenance.
-            </p>
+            <p>{t("isi_layanann5")}</p>
+            <p>{t("isi_paragraft55")}</p>
           </div>
         </div>
 
+        {/* Galeri 1: Overhaul Pompa BFP */}
         <div className="gallery-section">
           <div className="header-badges">
             <div className="badge-main">
               <h2>Overhaul Pompa BFP</h2>
             </div>
             <div className="badge-location">
-              <span className="pin-icon">📍</span>
+              <span className="pin-icon">
+                <img src="icons8-location-48.png" alt="icon-lokasi" className="icon-location" />
+              </span>
               <span>PT. Japa Indotama</span>
             </div>
           </div>
@@ -97,10 +100,11 @@ export default function Procurement() {
           </div>
         </div>
 
+        {/* Galeri 2: Pemasangan Sealstrip Turbin */}
         <div className="gallery-section" style={{ marginTop: '80px' }}>
           <div className="header-badges">
             <div className="badge-main text-multiline">
-              <h2>Pemasangan Sealstrip<br/>Turbin 15 MW</h2>
+              <h2>Pemasangan Sealstrip<br />Turbin 15 MW</h2>
             </div>
           </div>
 
@@ -131,10 +135,11 @@ export default function Procurement() {
           </div>
         </div>
 
+        {/* Galeri 3: Rewinding Motor */}
         <div className="gallery-section" style={{ marginTop: '80px' }}>
           <div className="header-badges">
             <div className="badge-main text-multiline">
-              <h2>Rewinding Motor<br/>180Kw High Volt</h2>
+              <h2>Rewinding Motor<br />180Kw High Volt</h2>
             </div>
           </div>
 

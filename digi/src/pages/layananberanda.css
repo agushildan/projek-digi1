@@ -1,0 +1,128 @@
+.layanan-container {
+  background-color: #98B7CF; 
+  text-align: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.layanan-title {
+  text-align: center;
+  font-size: 36px;
+  color: #131838;
+  margin-bottom: 40px;
+}
+
+.produk-logo1{
+  width: 90px;
+  height: 90px;
+  margin-top: -5px;
+}
+
+.produk-title-layanan{
+  font-size: 3rem;
+  color: #131838; 
+  font-weight: 900;
+  margin: 0;
+  margin-right: -10px;
+  margin-top: -10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+.digi-blue { color: #4FA0D8; }
+.digi-red { color: #D84F4F; }
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+  align-items: center;
+}
+
+.service-card {
+  background-color: #C1D4E3; 
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+
+.service-info {
+  flex: 1; 
+  padding-right: 20px;
+}
+
+.service-info h2 {
+  color: #3F77A4; 
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font: bold;
+  font-weight: bold;
+  text-align: left;
+}
+
+.service-info p {
+  color: #333333;
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0;
+  text-align: left;
+  max-width: 90%;
+}
+
+.service-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    flex-direction: column-reverse; 
+    text-align: center;
+    padding: 20px;
+  }
+
+  .produk-logo{
+    margin-left:  -25px;
+    margin-top: 10px;
+    height: 100px;
+  }
+
+  .service-info {
+    padding-right: 0;
+    margin-top: 20px;
+  }
+  .service-info h2{
+    text-align: center;
+  }
+
+  .service-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+  
+}
+
+
+
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clickable-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25); 
+}
