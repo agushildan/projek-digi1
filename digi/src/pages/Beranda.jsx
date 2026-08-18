@@ -74,7 +74,7 @@ function Beranda() {
   return (
     <div className="beranda-container">
       <div className="beranda-hero">
-        
+         
         <div className="beranda-left">
           <div className="beranda-judul"> 
             <h1 className="teks-biru">{t("hero_title_1")}</h1>
@@ -86,7 +86,7 @@ function Beranda() {
             <p>{t("hero_desc_1")}</p>
             <p>{t("hero_desc_2")}</p>
           </div>
-            
+
           <a 
             href="https://wa.me/6289519808548?text=Halo,%20saya%20ingin%20bertanya?"
             className="beranda-btn"
@@ -99,7 +99,7 @@ function Beranda() {
 
         <div className="beranda-right">
           <div className="hero-3d-wrapper">
-            
+              
             <img src={LatarDigi} alt="Latar Digi" className="beranda-latar" />
 
             <div className="canvas-layer">

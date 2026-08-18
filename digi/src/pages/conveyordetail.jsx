@@ -14,6 +14,7 @@ function Conveyor() {
     { id: 4, title: "Chain", image: "chail4.webp" },
     { id: 5, title: "Chain", image: "chain5.webp" },
     { id: 6, title: "Chain", image: "chain6.webp" },
+    
   ];
 
   const handleBack = () => {

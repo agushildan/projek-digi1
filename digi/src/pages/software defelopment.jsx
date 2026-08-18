@@ -28,9 +28,6 @@ function Software() {
 
 
 
-
-
-
     const [currentLang, setCurrentLang] = useState(i18n.language || "id");
   const t = (key) => i18n.t(key);
   useEffect(() => {
@@ -46,6 +43,7 @@ function Software() {
   }, []);
 
 
+
   return (
     <div className="page-wrapper">
       <main className="content-container">
@@ -58,6 +56,8 @@ function Software() {
           ❮ {t("btn_kembali")}
         </button>
        </div>
+
+
 
         <h1 className="judul-halaman">{t("judul_produk")}</h1>
         <div className="card-konten">

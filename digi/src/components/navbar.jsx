@@ -128,7 +128,9 @@ function Navbar() {
         <div className="mobile-header">
           <img src="digilogo.png" alt="Logo" className="mobile-logo" />
           <button className="close-btn" onClick={closeAllMenus}>
+            
             ✕
+
           </button>
         </div>
 
@@ -194,7 +196,7 @@ function Navbar() {
               {t("kegiatan")}
             </span>
           </li>
-
+        
           <li>
             <span 
               className={`dropdown-trigger ${activeMenu === "info" || isInfoAktif ? "menu-aktif" : ""}`} 
@@ -209,7 +211,7 @@ function Navbar() {
             </ul>
           </li>
         </ul>
-
+                                                                                                                                                                                                                           
         <div className="nav-right-container">
           <form className="search-box" onSubmit={handleSearch}>
             <input
@@ -218,9 +220,34 @@ function Navbar() {
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
             />
-            <button type="submit">{t("cari_btn")}</button>
-          </form>
 
+            <button type="submit">
+
+<svg
+  width="20"
+  height="20"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    cx="11"
+    cy="11"
+    r="7"
+    stroke="#131838"
+    strokeWidth="2"
+  />
+  <path
+    d="M16.5 16.5L21 21"
+    stroke="#131838"
+    strokeWidth="2"
+    strokeLinecap="round"
+  />
+</svg>
+
+            </button>
+
+          </form>
           <div className="language-switcher">
             <button
               type="button"
