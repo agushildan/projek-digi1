@@ -273,7 +273,7 @@ function Navbar() {
     <rect y="14" width="32" height="4" fill="#C8102E"/>
   </g>
 </svg>
-                
+
             </button>
           </div>
         </div>

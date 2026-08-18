@@ -6,7 +6,8 @@ export default function ImageWithSkeleton({ src, alt, className = '' }) {
 
   return (
     <div className={`image-skeleton-wrapper ${className}`}>
-      {!loaded && <div className="skeleton-shimmer" />}
+      {!loaded && <div className="skeleton-shimmer"></div>}
+
       <img
         src={src}
         alt={alt}
