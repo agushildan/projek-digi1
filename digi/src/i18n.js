@@ -89,6 +89,8 @@ btn_kembali:"Kembali",
       pesan: "Pesan",
       isi_pesan: "Masukan pesan anda",
       kirim: "Kirim",
+      judulwa:"Halo Admin,ada pesan baru dari website:",
+
 
       /* footer */
       layanan_digi:"Layanan Digi",
@@ -273,6 +275,7 @@ isi_layanan6:"With the rapid advancement of electrical and automation technologi
       pesan: "Message",
       isi_pesan: "Enter message",
       kirim: "Send",
+      judulwa:"Hello Admin, you have a new message from the website.",
 
       /* footer */
      layanan_digi:"Digi Services",

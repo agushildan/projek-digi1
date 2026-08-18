@@ -1,25 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./kkontak.css";
-import { Link } from "react-router-dom";
-import i18n from "../i18n"; 
-import ImageWithSkeleton from "../components/ImageWithSkeleton";
 
 function Kontak() {
-  const [currentLang, setCurrentLang] = useState(i18n.language || "id");
+  const { t } = useTranslation();
 
-  const t = (key) => i18n.t(key);
+  const [formData, setFormData] = useState({
+    nama: "",
+    email: "",
+    pesan: "",
+  });
 
-  useEffect(() => {
-    const handleLanguageChange = (lng) => {
-      setCurrentLang(lng);
-    };
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-    i18n.on("languageChanged", handleLanguageChange);
+  const handleKirimWA = (e) => {
+    e.preventDefault();
 
-    return () => {
-      i18n.off("languageChanged", handleLanguageChange);
-    };
-  }, []);
+    const phoneNumber = "6289519808548";
+
+    const textMessage =
+      `${t("judulwa")}\n\n` +
+      `*${t("nama")}:* ${formData.nama}\n` +
+      `*${t("email")}:* ${formData.email}\n` +
+      `*${t("pesan")}:* ${formData.pesan}`;
+
+    const encodedMessage = encodeURIComponent(textMessage);
+
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+  };
 
   return (
     <div className="kontak-container">
@@ -30,28 +43,47 @@ function Kontak() {
         {t("subtitle_kontak2")}
       </p>
 
-      <form className="kontak-form">
+      <form className="kontak-form" onSubmit={handleKirimWA}>
         <div className="form-group">
           <label>{t("nama")}</label>
-          <input type="text" placeholder={t("isi_nama")} />
+          <input
+            type="text"
+            name="nama"
+            placeholder={t("isi_nama")}
+            value={formData.nama}
+            onChange={handleChange}
+            required
+          />
         </div>
 
         <div className="form-group">
           <label>{t("email")}</label>
-          <input type="email" placeholder={t("isi_email")} />
+          <input
+            type="email"
+            name="email"
+            placeholder={t("isi_email")}
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
         </div>
 
         <div className="form-group">
           <label>{t("pesan")}</label>
-          <textarea placeholder={t("isi_pesan")} rows="5"></textarea>
+          <textarea
+            name="pesan"
+            placeholder={t("isi_pesan")}
+            rows="5"
+            value={formData.pesan}
+            onChange={handleChange}
+            required
+          ></textarea>
         </div>
 
         <div className="form-submit">
-          <Link to="/Tentang">
-            <button type="button" className="btn-kirim">
-              {t("kirim")}
-            </button>
-          </Link>
+          <button type="submit" className="btn-kirim">
+            {t("kirim")}
+          </button>
         </div>
       </form>
     </div>

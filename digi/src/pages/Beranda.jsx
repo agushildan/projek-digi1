@@ -88,7 +88,7 @@ function Beranda() {
           </div>
 
           <a 
-            href="https://wa.me/6289519808548?text=Halo,%20saya%20ingin%20bertanya?"
+            href="https://wa.me/6285924101807?text=Halo,%20saya%20ingin%20bertanya?"
             className="beranda-btn"
             target="_blank" 
             rel="noopener noreferrer"

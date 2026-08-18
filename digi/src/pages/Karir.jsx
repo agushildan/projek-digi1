@@ -55,7 +55,7 @@ const [currentLang, setCurrentLang] = useState(i18n.language || "id");
 
 <button 
   className="karir-btn-lamar" 
-  onClick={() => window.open('https://wa.me/6283186405391?text=Halo%20saya%20ingin%20melamar', '_blank')}
+  onClick={() => window.open('https://wa.me/6285924101807?text=Halo%20saya%20ingin%20melamar', '_blank')}
 >
   {t("btn_lamar")}
 </button>

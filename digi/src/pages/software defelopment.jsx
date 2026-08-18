@@ -57,8 +57,6 @@ function Software() {
         </button>
        </div>
 
-
-
         <h1 className="judul-halaman">{t("judul_produk")}</h1>
         <div className="card-konten">
           <h2 className="judul-produk">Software Development</h2>
